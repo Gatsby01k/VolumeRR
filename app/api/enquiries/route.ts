@@ -3,6 +3,7 @@ import { createHmac, randomUUID } from "node:crypto";
 import { validateEnquiry } from "@/lib/domain/enquiry";
 import { acceptEnquiry, openStore, takeRateLimit } from "@/lib/server/store";
 import { enquiryConfig } from "@/lib/server/config";
+import { isSameOriginRequest } from "@/lib/server/request-origin";
 
 export const runtime = "nodejs";
 const response = (
@@ -15,8 +16,7 @@ const response = (
     headers: { "Cache-Control": "no-store", ...headers },
   });
 export async function POST(request: Request) {
-  const origin = request.headers.get("origin");
-  if (!origin || origin !== new URL(request.url).origin)
+  if (!isSameOriginRequest(request))
     return response({ kind: "forbidden" }, 403);
   if (
     !request.headers

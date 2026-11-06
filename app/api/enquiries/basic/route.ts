@@ -1,9 +1,10 @@
 import { POST as submit } from "../route";
 import { basicErrorDocument, type BasicValues } from "@/lib/server/basic-form";
 import { enquiryConfig } from "@/lib/server/config";
+import { isSameOriginRequest } from "@/lib/server/request-origin";
 export const runtime = "nodejs";
 export async function POST(request: Request) {
-  if (request.headers.get("origin") !== new URL(request.url).origin)
+  if (!isSameOriginRequest(request))
     return new Response("Request origin not allowed.", { status: 403 });
   if (
     !request.headers
@@ -64,6 +65,9 @@ export async function POST(request: Request) {
       headers: {
         "Content-Type": "application/json",
         Origin: request.headers.get("origin")!,
+        ...(request.headers.has("host")
+          ? { Host: request.headers.get("host")! }
+          : {}),
         "x-real-ip": request.headers.get("x-real-ip") || "direct-connection",
       },
       body: JSON.stringify(payload),
@@ -71,7 +75,10 @@ export async function POST(request: Request) {
   );
   if (result.status === 202) {
     const headers = new Headers({
-      Location: new URL("/contact/confirmation", request.url).toString(),
+      Location: new URL(
+        "/contact/confirmation",
+        request.headers.get("origin")!,
+      ).toString(),
       "Cache-Control": "no-store",
     });
     const cookie = result.headers.get("set-cookie");

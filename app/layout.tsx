@@ -5,6 +5,7 @@ import { Header } from "@/components/navigation";
 import { Footer } from "@/components/common";
 import { siteUrl } from "@/lib/content";
 import "./globals.css";
+import "@/styles/manta.css";
 
 const manrope = localFont({
   src: "../public/fonts/Manrope.variable.woff2",

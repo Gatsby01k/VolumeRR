@@ -1,0 +1,111 @@
+{
+  "checkedAt": "2026-11-06T12:52:44Z",
+  "method": "Live desktop browser inspection of development and production builds; no separate Playwright CLI run",
+  "productionOrigin": "http://127.0.0.1:3001",
+  "buildPassed": true,
+  "unitApiTestsPassed": 40,
+  "httpRoutesPassed": 46,
+  "home": {
+    "method": "Painted ready-pose alpha bounds compared with actual text ranges and action rectangles; viewport checked after layout update",
+    "checks": [
+      { "width": 320, "slotWidth": 88, "overflow": false, "overlap": [] },
+      { "width": 375, "slotWidth": 88, "overflow": false, "overlap": [] },
+      { "width": 390, "slotWidth": 88, "overflow": false, "overlap": [] },
+      { "width": 600, "slotWidth": 64, "overflow": false, "overlap": [] },
+      { "width": 768, "slotWidth": 128, "overflow": false, "overlap": [] },
+      { "width": 959, "slotWidth": 128, "overflow": false, "overlap": [] },
+      { "width": 1024, "slotWidth": 220, "overflow": false, "overlap": [] },
+      { "width": 1280, "slotWidth": 280, "overflow": false, "overlap": [] },
+      { "width": 1440, "slotWidth": 280, "overflow": false, "overlap": [] },
+      { "width": 1920, "slotWidth": 280, "overflow": false, "overlap": [] }
+    ]
+  },
+  "gesturesObserved": {
+    "reveal": {
+      "phase": "lift",
+      "pose": 0,
+      "activeActorCount": 1,
+      "edgeCssLimitPx": 12,
+      "observedDevelopmentTranslateXPx": -11.1582,
+      "returnedToReady": true
+    },
+    "explore": {
+      "trigger": "Focused home market link",
+      "pose": 2,
+      "animation": "manta-explore-gesture"
+    },
+    "brief": {
+      "trigger": "Kenya selected in actual builder",
+      "pose": 3,
+      "limeImpulsePresent": true,
+      "neutralRailPose": 5,
+      "mobileRailWidth": 40
+    },
+    "attention": {
+      "trigger": "Continue without a product or Still exploring",
+      "pose": 4,
+      "accessibleErrorSummaryPresent": true
+    },
+    "received": {
+      "trigger": "Actual accepted synthetic enquiry and protected receipt",
+      "state": "enquiry_received",
+      "pose": 5,
+      "animation": "manta-received-gesture",
+      "durationMs": 420,
+      "returnedToReady": true
+    },
+    "preferences": {
+      "reducedStaticPoster": true,
+      "hideRemovesActors": true,
+      "showRestoresActor": true,
+      "preferencesRestoredToSystem": true
+    },
+    "introDoesNotReplayOnReturnToTop": true
+  },
+  "marketDirectory": {
+    "widths": [320, 390, 600, 768, 1024, 1440, 1920],
+    "pageOverflow": false,
+    "mobileActorWidth": 44,
+    "desktopActorWidth": 64
+  },
+  "form": [
+    { "width": 320, "actorWidth": 40, "overflow": false },
+    { "width": 390, "actorWidth": 40, "overflow": false },
+    { "width": 768, "actorWidth": 64, "overflow": false },
+    { "width": 1440, "actorWidth": 64, "overflow": false }
+  ],
+  "receipt": [
+    { "width": 320, "actorWidth": 44, "overflow": false },
+    { "width": 390, "actorWidth": 44, "overflow": false },
+    { "width": 768, "actorWidth": 64, "overflow": false },
+    { "width": 1024, "actorWidth": 64, "overflow": false },
+    { "width": 1440, "actorWidth": 64, "overflow": false }
+  ],
+  "isolatedReceiptTest": {
+    "origin": "http://127.0.0.1:3003",
+    "syntheticEnquiriesStored": 1,
+    "pendingOutboxRecords": 1,
+    "deliveryWorkerStarted": false,
+    "externalDeliveryOccurred": false,
+    "serverStoppedAndTemporaryDatabaseRemoved": true
+  },
+  "companionBudget": {
+    "assetBytes": 108704,
+    "sourceGzipBytes": 9303,
+    "combinedBytes": 118007,
+    "limitBytes": 184320,
+    "method": "Raw compressed image sizes plus gzip of companion TSX/domain/CSS source including the entire provider"
+  },
+  "previews": [
+    "previews/manta-home-v2.jpg",
+    "previews/manta-lift-v2.jpg",
+    "previews/manta-brief-v2.jpg",
+    "previews/manta-mobile-v2.jpg",
+    "previews/manta-receipt-v2.jpg"
+  ],
+  "limits": [
+    "Pre-rendered 2D poses and finite CSS/WAAPI choreography, not a GLB rig",
+    "No physical mobile device or assistive-technology certification",
+    "Initial site JavaScript remains above the 130 KiB budget"
+  ]
+}

@@ -36,22 +36,30 @@ export function Signature({ className = "" }: { className?: string }) {
         </linearGradient>
       </defs>
       <path
+        className="signature-paper"
         d="M90 4H900V620H228L14 260Q0 241 14 210L52 70Q68 20 90 4Z"
         fill="url(#paper-gradient)"
       />
-      <path
-        d="M90 4Q68 20 52 70L14 210Q0 241 14 260L228 620"
-        fill="none"
-        stroke="url(#metal-gradient)"
-        strokeWidth="8"
-      />
-      <path
-        d="M83 10Q62 29 46 72L8 210"
-        fill="none"
-        stroke="#CDFF00"
-        strokeWidth="2"
-      />
-      <path d="m178 554 41 59" fill="none" stroke="#FF251E" strokeWidth="4" />
+      <g className="signature-edge">
+        <path
+          className="signature-lip"
+          d="M90 4Q68 20 52 70L14 210Q0 241 14 260L228 620L240 620L26 254Q12 238 26 214L64 74Q80 24 102 4Z"
+          fill="url(#paper-gradient)"
+        />
+        <path
+          d="M90 4Q68 20 52 70L14 210Q0 241 14 260L228 620"
+          fill="none"
+          stroke="url(#metal-gradient)"
+          strokeWidth="8"
+        />
+        <path
+          d="M83 10Q62 29 46 72L8 210"
+          fill="none"
+          stroke="#CDFF00"
+          strokeWidth="2"
+        />
+        <path d="m178 554 41 59" fill="none" stroke="#FF251E" strokeWidth="4" />
+      </g>
     </svg>
   );
 }

@@ -26,11 +26,12 @@ import { BriefBuilder, FlowPicker, BriefSummary } from "./brief-builder";
 import { MarketDirectory, ComparePage } from "./markets";
 import { MethodCatalogue } from "./method-catalogue";
 import { Arrow } from "./icons";
+import { MantaScene, MantaExploreLink } from "./manta-scene";
 
 export function HomePage() {
   return (
     <>
-      <section className="home-hero dark">
+      <MantaScene>
         <div className="wrap home-hero-inner">
           <Eyebrow>PAYMENTS / BUILT AROUND THE FLOW</Eyebrow>
           <Signature />
@@ -53,7 +54,11 @@ export function HomePage() {
           <div className="home-market-focus paper">
             <span className="eyebrow">MARKET FOCUS</span>
             {regions.map((r, i) => (
-              <Link key={r.id} href={`/markets/${r.id}`}>
+              <MantaExploreLink
+                key={r.id}
+                href={`/markets/${r.id}`}
+                countryId={countries.find((c) => c.region === r.id)?.id}
+              >
                 <span className="small muted">0{i + 1}</span>
                 <strong>{r.short}</strong>
                 <span className="market-focus-detail">
@@ -63,7 +68,7 @@ export function HomePage() {
                     .join(" · ")}
                 </span>
                 <Arrow />
-              </Link>
+              </MantaExploreLink>
             ))}
             <p className="small muted">
               Scope and terms are confirmed for your business.
@@ -81,7 +86,7 @@ export function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </MantaScene>
       <Section light className="home-path">
         <div className="two-col">
           <div>

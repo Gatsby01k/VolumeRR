@@ -717,8 +717,6 @@ select {
   left: 34%;
   width: 252px;
   z-index: 4;
-  transform: rotate(-9deg);
-  animation: manta-intro 0.8s var(--ease) both;
 }
 .home-market-focus {
   position: absolute;
@@ -967,18 +965,6 @@ select {
 .cta-grid > .button {
   flex-shrink: 0;
   min-width: 235px;
-}
-.manta-explore {
-  animation: manta-nod 0.44s ease both;
-}
-.manta-brief_added {
-  animation: manta-nod 0.32s ease both;
-}
-.manta-attention {
-  animation: manta-attention 0.36s ease both;
-}
-.manta-enquiry_received {
-  animation: panel-in 0.42s ease both;
 }
 
 /* Payment / country */
@@ -2710,35 +2696,6 @@ summary::-webkit-details-marker {
   to {
     opacity: 1;
     translate: 0 0;
-  }
-}
-@keyframes manta-intro {
-  from {
-    opacity: 0;
-    transform: translate(-12px, 12px) rotate(-17deg);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0, 0) rotate(-9deg);
-  }
-}
-@keyframes manta-nod {
-  0%,
-  100% {
-    rotate: 0deg;
-  }
-  45% {
-    rotate: 8deg;
-    translate: 0 -5px;
-  }
-}
-@keyframes manta-attention {
-  0%,
-  100% {
-    rotate: 0deg;
-  }
-  45% {
-    rotate: -8deg;
   }
 }
 

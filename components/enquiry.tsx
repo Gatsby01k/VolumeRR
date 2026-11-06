@@ -277,7 +277,7 @@ export function EnquiryWizard({
         clear();
         setBusiness(blankBusiness);
         payloadRef.current = null;
-        announce("Enquiry received.", "enquiry_received");
+        announce("Enquiry received.");
         router.push("/contact/confirmation");
         return;
       }
@@ -1013,7 +1013,7 @@ export function EnquiryWizard({
           <div>
             <div className="enquiry-sidebar-head">
               <h2>Your brief</h2>
-              <Manta showcase className="form-manta" />
+              <Manta showcase className="form-manta" slot="form" />
             </div>
             <p className="muted">A summary of what you’ve shared so far.</p>
             <BriefSummary
@@ -1039,10 +1039,14 @@ export function Receipt({
 }: {
   initialReceipt?: EnquiryReceipt | null;
 }) {
+  const { confirmReceipt } = useBrief();
   const [receipt, setReceipt] = useState<EnquiryReceipt | null>(
     initialReceipt || null,
   );
   const [loading, setLoading] = useState(initialReceipt === undefined);
+  useEffect(() => {
+    if (receipt?.kind === "accepted") confirmReceipt(receipt);
+  }, [receipt, confirmReceipt]);
   useEffect(() => {
     const abort = new AbortController();
     fetch("/api/receipt", { cache: "no-store", signal: abort.signal })
@@ -1059,18 +1063,28 @@ export function Receipt({
       <div className="wrap">
         <Eyebrow>{receipt ? "ENQUIRY RECEIVED" : "YOUR PAYMENT BRIEF"}</Eyebrow>
         <h1>
-          {loading
-            ? "Checking your reference."
-            : receipt
-              ? "Your next move.<br/>Starts here."
-              : "Keep your next<br/>step clear."}
+          {loading ? (
+            "Checking your reference."
+          ) : receipt ? (
+            <>
+              Your next move.
+              <br />
+              Starts here.
+            </>
+          ) : (
+            <>
+              Keep your next
+              <br />
+              step clear.
+            </>
+          )}
         </h1>
         <div className="receipt-card paper">
           {loading ? (
             <p role="status">Checking for a confirmed enquiry…</p>
           ) : receipt ? (
             <>
-              <Manta showcase className="receipt-manta" />
+              <Manta showcase className="receipt-manta" slot="receipt" />
               <span className="eyebrow">ENQUIRY RECEIVED</span>
               <h2>Your enquiry has been received.</h2>
               <p>

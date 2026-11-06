@@ -1,0 +1,391 @@
+/* Manta: finite, event-driven 2D choreography. All controls remain ordinary HTML. */
+.manta-v2 {
+  aspect-ratio: 1;
+  height: auto;
+  isolation: isolate;
+}
+.manta-v2 .manta-reaction,
+.manta-v2 .manta-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.manta-v2 .manta-body {
+  transform-origin: 52% 64%;
+  transition:
+    transform 180ms var(--ease),
+    clip-path 180ms var(--ease);
+}
+.manta-v2 .manta-static-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 120ms linear;
+}
+.manta-v2[data-manta-source="atlas"] .manta-static-poster {
+  opacity: 0;
+}
+.manta-pose-stack,
+.manta-pose-frame {
+  position: absolute;
+  inset: 0;
+}
+.manta-pose-frame {
+  background-image: url("/brand/manta-poses-v2.webp");
+  background-size: 300% 200%;
+  background-repeat: no-repeat;
+  transition: opacity 120ms linear;
+}
+.home-hero .hero-manta.manta-v2 {
+  width: 280px;
+  transform: none;
+  animation: none;
+}
+.manta-v2[data-manta-stage="peek"] .manta-body {
+  transform: translate(-48px, 14px) rotate(-8deg) scale(0.9);
+  clip-path: inset(0 29% 0 0);
+}
+.manta-v2[data-manta-stage="turn"] .manta-body {
+  transform: perspective(700px) translate(-52px, -3px) rotate(-4deg)
+    rotateY(-12deg);
+  clip-path: inset(0);
+}
+.manta-v2[data-manta-stage="lift"] .manta-body {
+  transform: translate(-64px, -12px) rotate(2deg);
+  clip-path: inset(0);
+}
+.manta-v2[data-manta-stage="settle"] .manta-body {
+  transform: translate(0, 0) rotate(0);
+}
+.manta-v2:is(
+    [data-manta-stage="peek"],
+    [data-manta-stage="turn"],
+    [data-manta-stage="lift"]
+  )
+  .manta-pose-stack {
+  transform: scaleX(-1);
+}
+.manta-eyelids {
+  position: absolute;
+  inset: 0;
+}
+.manta-eyelids i {
+  position: absolute;
+  background: linear-gradient(135deg, #41413e, #272826);
+  border-radius: 50%;
+  transform: scaleY(0);
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+.manta-eyelids i:first-child {
+  left: 42.8%;
+  top: 36.9%;
+  width: 15.6%;
+  height: 15.8%;
+}
+.manta-eyelids i:last-child {
+  left: 67.8%;
+  top: 50.2%;
+  width: 8%;
+  height: 9%;
+}
+.manta-v2[data-manta-stage="settle"] .manta-eyelids i {
+  animation: manta-eye-close 120ms 160ms both;
+}
+.manta-v2 .manta-reaction[data-reaction="explore"] {
+  animation: manta-explore-gesture 440ms var(--ease) both;
+}
+.manta-v2 .manta-reaction[data-reaction="brief_added"] {
+  animation: manta-brief-gesture 320ms var(--ease) both;
+}
+.manta-v2 .manta-reaction[data-reaction="attention"] {
+  animation: manta-attention-gesture 180ms ease both;
+}
+.manta-v2 .manta-reaction[data-reaction="enquiry_received"] {
+  animation: manta-received-gesture 420ms var(--ease) both;
+}
+.manta-v2[data-manta-active="false"] *,
+.manta-v2[data-manta-state="reduced_static"] * {
+  animation: none !important;
+  transition: none !important;
+}
+.manta-v2[data-manta-state="reduced_static"] .manta-body {
+  transform: none !important;
+  clip-path: none !important;
+}
+.signature-edge {
+  transition: transform 220ms var(--ease);
+  transform-origin: 0 40%;
+}
+.signature-lip {
+  opacity: 0;
+  transition: opacity 180ms linear;
+}
+.home-hero[data-manta-reveal="peek"] .signature-edge {
+  transform: translateX(-2px);
+}
+.home-hero[data-manta-reveal="turn"] .signature-edge {
+  transform: translateX(-5px);
+}
+.home-hero[data-manta-reveal="lift"] .signature-edge {
+  transform: translateX(-12px);
+}
+.home-hero[data-manta-reveal="lift"] .signature-lip {
+  opacity: 1;
+}
+.home-hero[data-manta-reveal="settle"] .signature-edge {
+  transform: translateX(-3px);
+}
+.home-hero[data-manta-reveal="ready"] .signature-edge {
+  transform: none;
+}
+.home-market-focus > a {
+  position: relative;
+}
+.home-market-focus > a strong {
+  position: relative;
+  width: max-content;
+}
+.home-market-focus > a strong:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -9px;
+  height: 3px;
+  background: var(--lime);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms var(--ease);
+}
+.home-market-focus > a:is(:hover, :focus-visible) strong:after {
+  transform: scaleX(1);
+}
+.market-task-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.market-task-heading .eyebrow {
+  margin: 0;
+}
+.market-manta.manta-v2 {
+  flex: 0 0 64px;
+  width: 64px;
+}
+.form-manta.manta-v2 {
+  flex: 0 0 64px;
+  width: 64px;
+}
+.receipt-manta.manta-v2 {
+  width: 64px;
+  top: -40px;
+}
+.country-row {
+  transition:
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+.country-row:is(:hover, :focus-within) {
+  box-shadow: inset 3px 0 var(--lime);
+  background: #10171904;
+}
+.brief-rail .rail-manta.manta-v2 {
+  width: 64px;
+  height: 64px;
+  margin-top: -25px;
+  align-self: flex-start;
+}
+.brief-rail[data-manta-reaction="brief_added"] {
+  animation: manta-rail-receive 320ms ease;
+}
+.manta-brief-impulse {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 80;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes manta-eye-close {
+  0%,
+  100% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  42%,
+  62% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes manta-explore-gesture {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  58% {
+    transform: translate(6px, 3px) rotate(8deg);
+  }
+}
+@keyframes manta-brief-gesture {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  42% {
+    transform: translate(6px, -5px) rotate(-6deg);
+  }
+  76% {
+    transform: translate(3px, 2px) rotate(2deg);
+  }
+}
+@keyframes manta-attention-gesture {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  55% {
+    transform: rotate(-8deg);
+  }
+}
+@keyframes manta-received-gesture {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  40% {
+    transform: translateY(-6px) rotate(3deg);
+  }
+  70% {
+    transform: translateY(1px) rotate(0);
+  }
+}
+@keyframes manta-rail-receive {
+  0%,
+  100% {
+    border-top-color: var(--lime);
+  }
+  50% {
+    border-top-color: var(--paper);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  .home-hero .hero-manta.manta-v2 {
+    width: 220px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-hero .hero-manta.manta-v2 {
+    width: 128px;
+    left: 242px;
+    top: 385px;
+  }
+}
+@media (min-width: 600px) and (max-width: 767px) {
+  .home-hero .hero-manta.manta-v2 {
+    width: 64px;
+    left: 230px;
+    top: 385px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .manta-v2[data-manta-stage="peek"] .manta-body {
+    transform: translate(0, 5px) rotate(-8deg) scale(0.9);
+  }
+  .manta-v2[data-manta-stage="turn"] .manta-body {
+    transform: translate(0, -2px) rotate(-4deg);
+  }
+  .manta-v2[data-manta-stage="lift"] .manta-body {
+    transform: translate(0, -8px) rotate(2deg);
+  }
+}
+@media (max-width: 599px) {
+  .home-hero .hero-manta.manta-v2 {
+    width: 88px;
+    top: 170px;
+    right: 14px;
+    left: auto;
+  }
+  .manta-v2[data-manta-stage="peek"] .manta-body {
+    transform: translate(0, 5px) rotate(-8deg) scale(0.9);
+  }
+  .manta-v2[data-manta-stage="turn"] .manta-body {
+    transform: translate(0, -2px) rotate(-4deg);
+  }
+  .manta-v2[data-manta-stage="lift"] .manta-body {
+    transform: translate(0, -8px) rotate(2deg);
+  }
+  .home-hero .hero-markets:before {
+    transition: transform 220ms var(--ease);
+  }
+  .home-hero[data-manta-reveal="lift"] .hero-markets:before {
+    transform: translateY(-10px);
+  }
+  .home-hero[data-manta-reveal="settle"] .hero-markets:before {
+    transform: translateY(-3px);
+  }
+  .market-task-heading {
+    width: 100%;
+    gap: 12px;
+  }
+  .market-task-heading .eyebrow {
+    width: auto;
+    margin: 0;
+  }
+  .market-manta.manta-v2 {
+    width: 44px;
+    flex-basis: 44px;
+  }
+  .form-manta.manta-v2 {
+    width: 40px;
+    flex-basis: 40px;
+  }
+  .receipt-manta.manta-v2 {
+    width: 44px;
+    top: -28px;
+  }
+  .brief-rail .rail-manta.manta-v2 {
+    display: block;
+    position: absolute;
+    right: 64px;
+    top: -24px;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .manta-v2 *,
+  .signature-edge,
+  .signature-lip {
+    animation: none !important;
+    transition: none !important;
+  }
+  .manta-v2 .manta-body,
+  .signature-edge,
+  .home-hero .hero-markets:before {
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .manta-brief-impulse {
+    display: none;
+  }
+}
+html[data-motion="reduced"] .manta-brief-impulse {
+  display: none;
+}
+html[data-motion="reduced"] .manta-v2 .manta-body,
+html[data-motion="reduced"] .signature-edge,
+html[data-motion="reduced"] .home-hero .hero-markets:before {
+  transform: none !important;
+  clip-path: none !important;
+}

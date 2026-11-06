@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-06T11:10:38.928Z",
+  "checkedAt": "2026-11-06T12:52:44.246Z",
   "origin": "http://127.0.0.1:3001",
   "methodology": "Production HTML script and CSS resources fetched locally and gzip-compressed. Modern JS excludes the nomodule legacy polyfill. This is an asset-weight audit, not a field Core Web Vitals measurement.",
-  "allJsGzipBytes": 212768,
-  "modernJsGzipBytes": 173141,
-  "cssGzipBytes": 14937,
+  "allJsGzipBytes": 215098,
+  "modernJsGzipBytes": 175471,
+  "cssGzipBytes": 16201,
   "heroPosterBytes": 28302,
   "budgets": {
     "initialJsGzipBytes": 133120,
@@ -12,10 +12,10 @@
   },
   "assets": [
     {
-      "path": "/_next/static/chunks/09cok979_2_j7.css",
+      "path": "/_next/static/chunks/1x3a46olxnw5l.css",
       "legacyOnly": false,
-      "bytes": 73676,
-      "gzip": 14937
+      "bytes": 80058,
+      "gzip": 16201
     },
     {
       "path": "/_next/static/chunks/3v_59l1qr_8dp.js",
@@ -48,22 +48,22 @@
       "gzip": 5048
     },
     {
-      "path": "/_next/static/chunks/0dxhn6_oocsui.js",
+      "path": "/_next/static/chunks/3sgoykzl82zqq.js",
       "legacyOnly": false,
-      "bytes": 35470,
-      "gzip": 10667
+      "bytes": 41100,
+      "gzip": 12625
     },
     {
-      "path": "/_next/static/chunks/2v6wl_s7gts8m.js",
+      "path": "/_next/static/chunks/1-tal4jptiv8r.js",
       "legacyOnly": false,
-      "bytes": 21813,
-      "gzip": 6671
+      "bytes": 22019,
+      "gzip": 6695
     },
     {
-      "path": "/_next/static/chunks/2n9pg1wq_rcrn.js",
+      "path": "/_next/static/chunks/30kpn-pa9qtmg.js",
       "legacyOnly": false,
-      "bytes": 89282,
-      "gzip": 18853
+      "bytes": 90475,
+      "gzip": 19201
     },
     {
       "path": "/_next/static/chunks/1y3yq_dd62emc.js",

@@ -53,6 +53,8 @@ The repeatable browser suite is `npm run test:e2e` (install the Playwright Chrom
 
 ## Assets
 
-The original static Manta poster is used with short CSS reactions. Both archives explicitly omit a production GLB, rig and animation clips; no 3D asset is represented as delivered. The site works without WebGL. Font licenses are in `public/fonts`; brand provenance is in `public/brand/PROVENANCE.md`.
+Manta now has an event-driven pose atlas and a synchronized 800 ms paper-edge reveal. Market exploration, brief updates, validation and accepted receipts have distinct gestures; the brief impulse travels to the actual brief button. Only one instance is visible, including a small rail companion on mobile. System/user reduced motion, off-screen suspension, hide/show, static fallback and accepted-receipt gating remain available. See `docs/MANTA-MOTION.md` for the exact implementation and validation record.
+
+Both original archives omit a GLB, rig and animation clips. The new poses are pre-rendered 2D assets generated from the approved reference, not a supplied real-time 3D model. The site works without WebGL. Font licenses are in `public/fonts`; brand provenance is in `public/brand/PROVENANCE.md`.
 
 Raw handoff archives and temporary renderings stay in the ignored `.handoff` folder. No private form submissions, environment files or runtime databases are committed.

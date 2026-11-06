@@ -12,7 +12,7 @@ import {
 } from "@/lib/registry";
 import type { PageCopy } from "@/lib/content";
 import { Arrow, SearchIcon, Close } from "./icons";
-import { useBrief } from "./providers";
+import { useBrief, Manta } from "./providers";
 import { Signature, Eyebrow } from "./common";
 
 const methodTypes = [
@@ -46,7 +46,7 @@ export function MarketDirectory({
   const [compare, setCompare] = useState<string[]>([]);
   const [message, setMessage] = useState("");
   const [invalid, setInvalid] = useState(false);
-  const { brief, toggleMarket, announce } = useBrief();
+  const { brief, toggleMarket, announce, signalCompanion } = useBrief();
   const search = searchParams.toString();
   useEffect(() => {
     const p = new URLSearchParams(search);
@@ -116,6 +116,7 @@ export function MarketDirectory({
       ? compare.filter((v) => v !== id)
       : [...compare, id];
     setCompare(next);
+    signalCompanion({ type: "market_selected", countryId: id });
     setMessage("");
     try {
       sessionStorage.setItem("volumerail.compare.v1", JSON.stringify(next));
@@ -246,11 +247,14 @@ export function MarketDirectory({
       <section className="paper market-results section">
         <div className="wrap">
           <div className="results-top">
-            <Eyebrow>
-              {preset
-                ? `${regions.find((r) => r.id === preset)?.label.toUpperCase()} / FOCUS MARKETS`
-                : "FOUR FOCUS MARKETS"}
-            </Eyebrow>
+            <div className="market-task-heading">
+              <Manta showcase slot="market" className="market-manta" />
+              <Eyebrow>
+                {preset
+                  ? `${regions.find((r) => r.id === preset)?.label.toUpperCase()} / FOCUS MARKETS`
+                  : "FOUR FOCUS MARKETS"}
+              </Eyebrow>
+            </div>
             <p role="status" className="small muted">
               {filtered.length} {filtered.length === 1 ? "market" : "markets"}{" "}
               shown
@@ -282,7 +286,23 @@ export function MarketDirectory({
                 <span>Explore / Brief</span>
               </div>
               {filtered.map((c) => (
-                <div className="country-row" key={c.id}>
+                <div
+                  className="country-row"
+                  key={c.id}
+                  data-market-id={c.id}
+                  onPointerEnter={() =>
+                    signalCompanion({
+                      type: "market_selected",
+                      countryId: c.id,
+                    })
+                  }
+                  onFocusCapture={() =>
+                    signalCompanion({
+                      type: "market_selected",
+                      countryId: c.id,
+                    })
+                  }
+                >
                   <label className="compare-checkbox">
                     <input
                       type="checkbox"

@@ -1,0 +1,112 @@
+{
+  "type": "pre-rendered 2D atlas",
+  "tool": "built-in ImageGen",
+  "source": "design/manta/pose-atlas-source.png",
+  "asset": "public/brand/manta-poses-v2.webp",
+  "assetBytes": 77310,
+  "sha256": "67e6e7943ddccffb55163abc1e0cdc703582ab7b6e2ed3711bd7224e5853b68f",
+  "grid": [
+    3,
+    2
+  ],
+  "sourceCellSize": 512,
+  "webCellSize": 320,
+  "poses": [
+    {
+      "name": "reveal",
+      "cell": 0,
+      "bbox": [
+        53,
+        77,
+        440,
+        476
+      ],
+      "normalizedBbox": [
+        0.103515625,
+        0.150390625,
+        0.859375,
+        0.9296875
+      ]
+    },
+    {
+      "name": "ready",
+      "cell": 1,
+      "bbox": [
+        40,
+        87,
+        454,
+        434
+      ],
+      "normalizedBbox": [
+        0.078125,
+        0.169921875,
+        0.88671875,
+        0.84765625
+      ]
+    },
+    {
+      "name": "explore",
+      "cell": 2,
+      "bbox": [
+        42,
+        85,
+        468,
+        417
+      ],
+      "normalizedBbox": [
+        0.08203125,
+        0.166015625,
+        0.9140625,
+        0.814453125
+      ]
+    },
+    {
+      "name": "brief",
+      "cell": 3,
+      "bbox": [
+        55,
+        101,
+        465,
+        414
+      ],
+      "normalizedBbox": [
+        0.107421875,
+        0.197265625,
+        0.908203125,
+        0.80859375
+      ]
+    },
+    {
+      "name": "attention",
+      "cell": 4,
+      "bbox": [
+        35,
+        84,
+        473,
+        438
+      ],
+      "normalizedBbox": [
+        0.068359375,
+        0.1640625,
+        0.923828125,
+        0.85546875
+      ]
+    },
+    {
+      "name": "perch",
+      "cell": 5,
+      "bbox": [
+        31,
+        131,
+        472,
+        384
+      ],
+      "normalizedBbox": [
+        0.060546875,
+        0.255859375,
+        0.921875,
+        0.75
+      ]
+    }
+  ]
+}

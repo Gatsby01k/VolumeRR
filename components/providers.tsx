@@ -14,6 +14,7 @@ import type {
   BriefContext,
   CtaContext,
   CompanionState,
+  EnquiryReceipt,
 } from "@/contracts/content-model";
 import {
   BRIEF_KEY,
@@ -24,6 +25,17 @@ import {
 import { countries, products } from "@/lib/registry";
 import Link from "next/link";
 import { Arrow, Chevron, Close } from "./icons";
+import { MantaSprite, BriefImpulse, type MantaSlot } from "./manta-sprite";
+import {
+  effectiveMantaState,
+  idleManta,
+  reactManta,
+  reactionDuration,
+  revealTimeline,
+  type MantaEvent,
+  type MantaReaction,
+  type RevealPhase,
+} from "@/lib/domain/companion";
 
 type Context = {
   initialized: boolean;
@@ -41,6 +53,13 @@ type Context = {
   showcase: boolean;
   setShowcase: (v: boolean) => void;
   companionState: CompanionState;
+  companionReaction: MantaReaction;
+  signalCompanion: (event: MantaEvent) => void;
+  confirmReceipt: (receipt: EnquiryReceipt) => void;
+  reducedMotion: boolean;
+  revealPhase: RevealPhase;
+  beginReveal: () => void;
+  endReveal: (skipFuture?: boolean) => void;
   openPreferences: (type: "cookies" | "motion") => void;
 };
 const Brief = createContext<Context | null>(null);
@@ -54,7 +73,13 @@ export function Providers({ children }: { children: ReactNode }) {
   const [brief, setBrief] = useState<BriefContext>(emptyBrief);
   const [ready, setReady] = useState(false);
   const [notice, setNotice] = useState("");
-  const [companionState, setCompanionState] = useState<CompanionState>("ready");
+  const [companionReaction, setCompanionReaction] =
+    useState<MantaReaction>(idleManta);
+  const [reveal, setReveal] = useState<{
+    phase: RevealPhase;
+    startedAt: number;
+  }>({ phase: "ready", startedAt: 0 });
+  const [systemReduced, setSystemReduced] = useState(false);
   const [mantaVisible, setManta] = useState(true);
   const [motion, setMotionState] = useState("system");
   const [showcase, setShowcase] = useState(false);
@@ -65,18 +90,138 @@ export function Providers({ children }: { children: ReactNode }) {
   const path = usePathname();
   const eventTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
+  const revealed = useRef(false);
+  const previousBrief = useRef<BriefContext | null>(null);
+  const observedBrief = useRef(false);
+  const confirmedReceipt = useRef<string | null>(null);
+  const reducedMotion = motion === "reduced" || systemReduced;
+  const revealing = reveal.phase !== "ready";
+  const companionState = effectiveMantaState(
+    companionReaction.state,
+    mantaVisible,
+    reducedMotion,
+  );
+  const signalCompanion = useCallback((event: MantaEvent) => {
+    if (document.visibilityState !== "visible") return;
+    setCompanionReaction((current) => reactManta(current, event));
+  }, []);
+  const confirmReceipt = useCallback(
+    (receipt: EnquiryReceipt) => {
+      if (
+        receipt.kind !== "accepted" ||
+        !receipt.receiptId ||
+        confirmedReceipt.current === receipt.receiptId
+      )
+        return;
+      confirmedReceipt.current = receipt.receiptId;
+      signalCompanion({ type: "enquiry_accepted", receiptAccepted: true });
+    },
+    [signalCompanion],
+  );
+  const endReveal = useCallback((skipFuture = false) => {
+    if (skipFuture) revealed.current = true;
+    setReveal((current) =>
+      current.phase === "ready" ? current : { ...current, phase: "ready" },
+    );
+  }, []);
+  const beginReveal = useCallback(() => {
+    if (revealed.current || reducedMotion || !mantaVisible) return;
+    revealed.current = true;
+    setReveal({ phase: "peek", startedAt: performance.now() });
+  }, [reducedMotion, mantaVisible]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const change = () => setSystemReduced(media.matches);
+    change();
+    media.addEventListener("change", change);
+    return () => media.removeEventListener("change", change);
+  }, []);
+  useEffect(() => {
+    if (!revealing) return;
+    if (reducedMotion || !mantaVisible) {
+      endReveal();
+      return;
+    }
+    const elapsed = performance.now() - reveal.startedAt;
+    if (elapsed >= 800) {
+      endReveal();
+      return;
+    }
+    const timers = revealTimeline
+      .filter((mark) => mark.at > elapsed)
+      .map((mark) =>
+        setTimeout(
+          () =>
+            setReveal((current) =>
+              current.phase === "ready"
+                ? current
+                : { ...current, phase: mark.phase },
+            ),
+          mark.at - elapsed,
+        ),
+      );
+    return () => timers.forEach(clearTimeout);
+  }, [reveal.startedAt, revealing, reducedMotion, mantaVisible, endReveal]);
+  useEffect(() => {
+    const duration = reactionDuration[companionReaction.state];
+    if (!duration) return;
+    const timer = setTimeout(
+      () =>
+        setCompanionReaction((current) =>
+          current.sequence === companionReaction.sequence
+            ? { ...current, state: "ready" }
+            : current,
+        ),
+      duration,
+    );
+    return () => clearTimeout(timer);
+  }, [companionReaction.state, companionReaction.sequence]);
+  useEffect(() => {
+    if (!ready || !observedBrief.current) {
+      previousBrief.current = brief;
+      observedBrief.current = ready;
+      return;
+    }
+    const previous = previousBrief.current;
+    previousBrief.current = brief;
+    if (
+      previous &&
+      brief.marketIds.length + brief.flowIds.length > 0 &&
+      (previous.marketIds.join() !== brief.marketIds.join() ||
+        previous.flowIds.join() !== brief.flowIds.join())
+    )
+      signalCompanion({ type: "brief_updated" });
+  }, [brief, ready, signalCompanion]);
+  useEffect(() => {
+    endReveal();
+    if (path !== "/contact/confirmation")
+      setCompanionReaction((current) =>
+        current.state === "ready" ? current : { ...current, state: "ready" },
+      );
+  }, [path, endReveal]);
+  useEffect(() => {
+    const visibility = () => {
+      if (document.visibilityState !== "visible") {
+        endReveal();
+        setCompanionReaction((current) => ({ ...current, state: "ready" }));
+      }
+    };
+    document.addEventListener("visibilitychange", visibility);
+    return () => document.removeEventListener("visibilitychange", visibility);
+  }, [endReveal]);
 
   const announce = useCallback(
-    (text: string, state: CompanionState = "brief_added") => {
+    (text: string, state?: CompanionState) => {
       setNotice(text);
-      setCompanionState(state);
+      if (state === "attention") signalCompanion({ type: "validation_failed" });
+      if (state === "explore") signalCompanion({ type: "market_selected" });
       if (eventTimer.current) clearTimeout(eventTimer.current);
       eventTimer.current = setTimeout(() => {
         setNotice("");
-        setCompanionState("ready");
       }, 2800);
     },
-    [],
+    [signalCompanion],
   );
   useEffect(() => {
     try {
@@ -196,11 +341,25 @@ export function Providers({ children }: { children: ReactNode }) {
         showcase,
         setShowcase,
         companionState,
+        companionReaction,
+        signalCompanion,
+        confirmReceipt,
+        reducedMotion,
+        revealPhase: reveal.phase,
+        beginReveal,
+        endReveal,
         openPreferences: setPreferences,
       }}
     >
       {children}
       <BriefRail />
+      {companionReaction.state === "brief_added" && (
+        <BriefImpulse
+          key={companionReaction.sequence}
+          sequence={companionReaction.sequence}
+          enabled={mantaVisible && !reducedMotion}
+        />
+      )}
       <div className="sr-only" role="status" aria-live="polite">
         {notice}
       </div>
@@ -327,6 +486,7 @@ function BriefRail() {
     <aside
       className={`brief-rail ${collapsed ? "collapsed" : ""}`}
       aria-label="Your payment brief"
+      data-manta-reaction={companionState}
     >
       <div className="rail-inner">
         <div className="rail-title">
@@ -360,16 +520,7 @@ function BriefRail() {
           !showcase &&
           !path.startsWith("/legal") &&
           !path.startsWith("/developers/") &&
-          path !== "/support" && (
-            <img
-              className={`rail-manta manta-${companionState}`}
-              src="/brand/manta-small.webp"
-              width="48"
-              height="42"
-              alt=""
-              aria-hidden="true"
-            />
-          )}
+          path !== "/support" && <Manta className="rail-manta" slot="rail" />}
         <Link className="button" href="/contact">
           Review brief <Arrow />
         </Link>
@@ -389,39 +540,33 @@ function BriefRail() {
 export function Manta({
   className = "",
   showcase = false,
+  slot = "hero",
 }: {
   className?: string;
   showcase?: boolean;
+  slot?: MantaSlot;
 }) {
-  const { mantaVisible, companionState, setShowcase } = useBrief();
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (!showcase || !ref.current || !mantaVisible) return;
-    const observer = new IntersectionObserver(
-      (entries) => setShowcase(entries[0].isIntersecting),
-      { threshold: 0.1 },
-    );
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-      setShowcase(false);
-    };
-  }, [showcase, setShowcase, mantaVisible]);
+  const {
+    mantaVisible,
+    companionState,
+    companionReaction,
+    setShowcase,
+    reducedMotion,
+    revealPhase,
+    beginReveal,
+  } = useBrief();
   if (!mantaVisible) return null;
   return (
-    <div
-      ref={ref}
-      aria-hidden="true"
-      className={`manta ${className} manta-${companionState}`}
-    >
-      <img
-        src="/brand/manta.webp"
-        alt=""
-        width="512"
-        height="512"
-        draggable="false"
-      />
-    </div>
+    <MantaSprite
+      className={className}
+      state={companionState}
+      sequence={companionReaction.sequence}
+      slot={slot}
+      reduced={reducedMotion}
+      phase={revealPhase}
+      onPresence={showcase ? setShowcase : undefined}
+      onReveal={slot === "hero" ? beginReveal : undefined}
+    />
   );
 }
 

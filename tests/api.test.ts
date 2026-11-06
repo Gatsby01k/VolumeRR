@@ -103,7 +103,8 @@ test("HTTP boundary: validation, commit, retry, conflict, receipt privacy and re
       new Request("http://localhost:3000/api/enquiries/basic", {
         method: "POST",
         headers: {
-          Origin: "http://localhost:3000",
+          Origin: "http://127.0.0.1:3000",
+          Host: "127.0.0.1:3000",
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: form,
@@ -112,7 +113,7 @@ test("HTTP boundary: validation, commit, retry, conflict, receipt privacy and re
     assert.equal(native.status, 303);
     assert.equal(
       native.headers.get("location"),
-      "http://localhost:3000/contact/confirmation",
+      "http://127.0.0.1:3000/contact/confirmation",
     );
     assert(native.headers.get("set-cookie")?.includes("HttpOnly"));
   } finally {
