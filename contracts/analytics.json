@@ -1,0 +1,147 @@
+{
+  "version": "1.0",
+  "prohibitedProperties": [
+    "name",
+    "email",
+    "company",
+    "website",
+    "requirements",
+    "amount",
+    "supportReference",
+    "receiptId",
+    "idempotencyKey",
+    "bankAccount",
+    "walletAddress",
+    "q",
+    "otherMarkets",
+    "settlementAsset",
+    "settlementNetwork"
+  ],
+  "commonAllowed": [
+    "routeId",
+    "templateId",
+    "locale",
+    "deviceClass",
+    "motionMode",
+    "contentVersion"
+  ],
+  "events": [
+    {
+      "name": "navigation_opened",
+      "allowedProperties": [
+        "groupId"
+      ]
+    },
+    {
+      "name": "market_filter_changed",
+      "allowedProperties": [
+        "regionId",
+        "flowId",
+        "methodCategory"
+      ]
+    },
+    {
+      "name": "market_opened",
+      "allowedProperties": [
+        "marketId",
+        "originRouteId"
+      ]
+    },
+    {
+      "name": "market_added_to_brief",
+      "allowedProperties": [
+        "marketId",
+        "count"
+      ]
+    },
+    {
+      "name": "market_removed_from_brief",
+      "allowedProperties": [
+        "marketId",
+        "count"
+      ]
+    },
+    {
+      "name": "comparison_opened",
+      "allowedProperties": [
+        "marketCount"
+      ]
+    },
+    {
+      "name": "product_added_to_brief",
+      "allowedProperties": [
+        "flowId"
+      ]
+    },
+    {
+      "name": "brief_opened",
+      "allowedProperties": [
+        "marketCount",
+        "flowCount",
+        "purpose"
+      ]
+    },
+    {
+      "name": "brief_step_completed",
+      "allowedProperties": [
+        "stepId",
+        "purpose"
+      ]
+    },
+    {
+      "name": "brief_validation_failed",
+      "allowedProperties": [
+        "stepId",
+        "errorCode"
+      ]
+    },
+    {
+      "name": "enquiry_submission_started",
+      "allowedProperties": [
+        "purpose"
+      ]
+    },
+    {
+      "name": "enquiry_accepted",
+      "allowedProperties": [
+        "purpose"
+      ]
+    },
+    {
+      "name": "enquiry_uncertain",
+      "allowedProperties": [
+        "errorCode"
+      ]
+    },
+    {
+      "name": "integration_material_opened",
+      "allowedProperties": [
+        "documentId",
+        "materialMode"
+      ]
+    },
+    {
+      "name": "evidence_opened",
+      "allowedProperties": [
+        "evidenceId",
+        "category"
+      ]
+    },
+    {
+      "name": "motion_preference_changed",
+      "allowedProperties": [
+        "motionMode"
+      ]
+    },
+    {
+      "name": "companion_preference_changed",
+      "allowedProperties": [
+        "visible",
+        "motionMode"
+      ]
+    }
+  ],
+  "transport": "Optional analytics only after the selected consent policy permits it; no events before that decision.",
+  "storage": "No session replay, keystroke capture or form-field recording.",
+  "successDefinition": "enquiry_accepted fires once only after a durable accepted receipt."
+}

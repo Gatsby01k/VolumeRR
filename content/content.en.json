@@ -1,0 +1,1378 @@
+{
+  "version": "1.0.0",
+  "locale": "en",
+  "global": {
+    "availability": {
+      "unverified": "Scope to confirm",
+      "available": "Available within confirmed scope",
+      "conditional": "Available with conditions",
+      "unavailable": "Not available for this scope",
+      "stale": "Details being reviewed"
+    },
+    "actions": {
+      "addMarket": "Add country to brief",
+      "addFlow": "Add to brief",
+      "remove": "Remove",
+      "review": "Review brief",
+      "send": "Send enquiry",
+      "sending": "Sending enquiry…",
+      "retry": "Retry safely",
+      "back": "Back",
+      "next": "Continue",
+      "edit": "Edit",
+      "clear": "Clear filters",
+      "compare": "Compare markets",
+      "hideManta": "Hide Manta"
+    },
+    "filters": {
+      "search": "Search country or currency",
+      "regions": "All regions",
+      "flows": "All products",
+      "noResults": "No markets match these filters.",
+      "noResultsBody": "Clear a filter or tell us about another market.",
+      "compareLimit": "You can compare up to three markets. Remove one to add another."
+    },
+    "brief": {
+      "title": "Your payment brief",
+      "empty": "Start with a market or a payment need.",
+      "marketExploring": "Not sure yet",
+      "otherMarket": "Other market",
+      "flowExploring": "Still exploring",
+      "added": "Added to your brief.",
+      "removed": "Removed from your brief.",
+      "invalidSaved": "Some saved choices are no longer available. Please review your brief."
+    },
+    "form": {
+      "steps": [
+        "Markets",
+        "Products",
+        "Business",
+        "Review"
+      ],
+      "company": "Company or project",
+      "email": "Contact email",
+      "name": "Your name (optional)",
+      "website": "Website (optional)",
+      "volume": "Expected monthly volume (optional)",
+      "currency": "Volume currency",
+      "requirements": "Anything else we should know? (optional)",
+      "safeInput": "Please do not include bank details, passwords or identity documents.",
+      "privacy": "I have read the Privacy Notice.",
+      "marketing": "Yes, I’d like to receive product updates (optional).",
+      "errorTitle": "Please check the highlighted details.",
+      "uncertainTitle": "We could not confirm the result yet.",
+      "uncertainBody": "Your enquiry may have been received. Retry safely to check without sending a duplicate.",
+      "unavailable": "We could not accept the enquiry. Your details are still here. Please try again.",
+      "rateLimited": "Please wait a moment before trying again.",
+      "acceptedTitle": "Enquiry received.",
+      "missingReceipt": "There is no confirmed enquiry to show. Return to your brief to continue.",
+      "receiptLabel": "Enquiry reference",
+      "purpose": "What would you like to discuss?",
+      "companyError": "Enter your company or project.",
+      "emailError": "Enter a valid contact email.",
+      "marketError": "Select a market, add another or choose Not sure yet.",
+      "flowError": "Select a product or choose Still exploring.",
+      "privacyError": "Please read and acknowledge the Privacy Notice.",
+      "websiteError": "Enter a complete website address beginning with https:// or http://.",
+      "volumeError": "Enter a non-negative amount and select its currency.",
+      "partnerTypeError": "Choose the type of partnership.",
+      "unknownChoiceError": "This choice needs to be reviewed. Please select it again."
+    },
+    "companion": {
+      "hide": "Hide Manta",
+      "show": "Show Manta",
+      "motionReduced": "Reduced motion",
+      "role": "A living part of the flow.",
+      "speechBubbles": false
+    },
+    "general": {
+      "illustration": "Illustrative flow",
+      "conceptual": "Conceptual example",
+      "methodContext": "Local market context",
+      "availabilityNote": "Market availability and terms are confirmed for your business.",
+      "skip": "Skip to content",
+      "menu": "Menu",
+      "close": "Close",
+      "motion": "Motion preferences",
+      "loading": "Loading…",
+      "recoverable": "This section could not load. Please try again.",
+      "copySuccess": "Copied.",
+      "copyError": "Could not copy. Select the text to copy it manually."
+    }
+  },
+  "pages": {
+    "home": {
+      "path": "/",
+      "eyebrow": "HOME",
+      "h1": "Move value. Open markets.",
+      "summary": "Pay-ins, payouts and settlement. Built around local markets.",
+      "primaryCta": {
+        "label": "Explore markets",
+        "href": "/markets"
+      },
+      "sections": [
+        {
+          "heading": "A clear path. At every stage.",
+          "body": "Define the instruction, understand the processing steps and agree what confirmation means for your records."
+        },
+        {
+          "heading": "Your next market. Start with the details.",
+          "body": "Choose your markets and payment needs. Carry the same brief from exploration to the first conversation."
+        },
+        {
+          "heading": "Clarity before the first flow.",
+          "body": "Align market scope, integration requirements and operating conditions before implementation."
+        },
+        {
+          "heading": "Let’s map your next move.",
+          "body": "Tell us where you want to operate and how value needs to move."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "payments": {
+      "path": "/payments",
+      "eyebrow": "PAYMENTS",
+      "h1": "One operating flow. Three connected parts.",
+      "summary": "Scope local collection, outgoing payments and settlement as connected parts of your operation.",
+      "primaryCta": {
+        "label": "Discuss your flow",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Pay-ins",
+          "body": "Define how customers should pay and which local methods to assess."
+        },
+        {
+          "heading": "Payouts",
+          "body": "Define recipients, required fields and confirmation for outgoing funds."
+        },
+        {
+          "heading": "Settlement",
+          "body": "Agree currency, reporting and the conditions for moving the resulting balance."
+        },
+        {
+          "heading": "You define. We confirm.",
+          "body": "You bring the business model, target markets and desired flow. We confirm the proposed scope, responsibilities and next steps."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Can I discuss more than one product?",
+          "answer": "Yes. Add each relevant product to your brief and describe how they connect."
+        }
+      ],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "pay_ins": {
+      "path": "/payments/pay-ins",
+      "eyebrow": "PAY-INS",
+      "h1": "Local collection. A clearer start.",
+      "summary": "Define the customer payment journey around local methods and operating requirements.",
+      "primaryCta": {
+        "label": "Add pay-ins to your brief",
+        "href": "/contact",
+        "flowIds": [
+          "pay_in"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Customer instruction",
+          "body": "Which customer details and payment reference are needed?"
+        },
+        {
+          "heading": "Processing",
+          "body": "Which method, provider scope and exception paths should be agreed?"
+        },
+        {
+          "heading": "Confirmation",
+          "body": "Which event and record should your system treat as authoritative?"
+        },
+        {
+          "heading": "Built around your markets",
+          "body": "Choose the countries relevant to this flow. Availability and conditions are confirmed for your business."
+        },
+        {
+          "heading": "Plan the integration",
+          "body": "Agree required fields, event meanings, records and test criteria before launch."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Are timing and pricing the same in every market?",
+          "answer": "They depend on the agreed market, method, merchant scope and operating arrangement. Include your requirements in the brief."
+        }
+      ],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "payouts": {
+      "path": "/payments/payouts",
+      "eyebrow": "PAYOUTS",
+      "h1": "Outgoing payments. A clearer path.",
+      "summary": "Plan outgoing funds around recipients, required data and a dependable record of the outcome.",
+      "primaryCta": {
+        "label": "Add payouts to your brief",
+        "href": "/contact",
+        "flowIds": [
+          "payout"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Recipient scope",
+          "body": "Who receives funds and which account or wallet details are required?"
+        },
+        {
+          "heading": "Processing scope",
+          "body": "How should instructions, checks, retries and exceptions be handled?"
+        },
+        {
+          "heading": "Confirmation scope",
+          "body": "How will the recipient outcome and reconciliation record reach your team?"
+        },
+        {
+          "heading": "Built around your markets",
+          "body": "Choose the countries relevant to this flow. Availability and conditions are confirmed for your business."
+        },
+        {
+          "heading": "Plan the integration",
+          "body": "Agree required fields, event meanings, records and test criteria before launch."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Are timing and pricing the same in every market?",
+          "answer": "They depend on the agreed market, method, merchant scope and operating arrangement. Include your requirements in the brief."
+        }
+      ],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "settlement": {
+      "path": "/payments/settlement",
+      "eyebrow": "SETTLEMENT",
+      "h1": "Close the loop. Keep the record.",
+      "summary": "Bring currency, timing, destination and reconciliation into the same operating discussion.",
+      "primaryCta": {
+        "label": "Add settlement to your brief",
+        "href": "/contact",
+        "flowIds": [
+          "settlement"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Balance and scope",
+          "body": "What balance is being settled, by whom and under which agreement?"
+        },
+        {
+          "heading": "Destination and timing",
+          "body": "Which currency, destination and scheduling conditions should be assessed?"
+        },
+        {
+          "heading": "Records and exceptions",
+          "body": "How should fees, FX, references and differences appear in reporting?"
+        },
+        {
+          "heading": "Built around your markets",
+          "body": "Choose the countries relevant to this flow. Availability and conditions are confirmed for your business."
+        },
+        {
+          "heading": "Plan the integration",
+          "body": "Agree required fields, event meanings, records and test criteria before launch."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Are timing and pricing the same in every market?",
+          "answer": "They depend on the agreed market, method, merchant scope and operating arrangement. Include your requirements in the brief."
+        }
+      ],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "methods": {
+      "path": "/payments/methods",
+      "eyebrow": "LOCAL METHODS",
+      "h1": "The right method starts with the market.",
+      "summary": "Explore the local method landscape and separate market context from confirmed availability.",
+      "primaryCta": {
+        "label": "Explore a market",
+        "href": "/markets"
+      },
+      "sections": [
+        {
+          "heading": "Local context",
+          "body": "Method descriptions explain the market. A listed name does not by itself confirm access through VolumeRail."
+        },
+        {
+          "heading": "Scope to confirm",
+          "body": "Share the country, direction of funds and business model so the relevant scope can be assessed."
+        },
+        {
+          "heading": "Missing a method?",
+          "body": "Include the method name in your brief. We can discuss the requirement with your chosen markets."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "markets": {
+      "path": "/markets",
+      "eyebrow": "MARKET FOCUS",
+      "h1": "Start with the local detail.",
+      "summary": "Explore market context, compare setup questions and carry your choices into a payment brief.",
+      "primaryCta": {
+        "label": "Review your brief",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Four focus markets",
+          "body": "India, Peru, Ghana and Kenya form the initial exploration set."
+        },
+        {
+          "heading": "Compare the operating detail",
+          "body": "Review currencies, local method context and questions to confirm before choosing a setup."
+        },
+        {
+          "heading": "A different market?",
+          "body": "Tell us where you want to operate, even if it is not listed here."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "asia": {
+      "path": "/markets/asia",
+      "eyebrow": "ASIA",
+      "h1": "Asia. Start with the local detail.",
+      "summary": "Start with India and the INR flow. Each market needs its own method and operating scope.",
+      "primaryCta": {
+        "label": "Explore India",
+        "href": "/markets/india"
+      },
+      "sections": [
+        {
+          "heading": "India / INR",
+          "body": "Explore UPI, IMPS and NEFT as local context, then define the flow you need."
+        },
+        {
+          "heading": "Start with the scenario",
+          "body": "Describe the customer or recipient, direction of funds and required record."
+        },
+        {
+          "heading": "Beyond the initial focus",
+          "body": "Add another Asian market to your enquiry so the requirement can be assessed."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "latam": {
+      "path": "/markets/latam",
+      "eyebrow": "LATIN AMERICA",
+      "h1": "Latin America. Start with the local detail.",
+      "summary": "Start with Peru and the PEN flow. Local customer behaviour and method scope shape the setup.",
+      "primaryCta": {
+        "label": "Explore Peru",
+        "href": "/markets/peru"
+      },
+      "sections": [
+        {
+          "heading": "Peru / PEN",
+          "body": "Explore Yape and Plin as local context. Confirm access and merchant conditions separately."
+        },
+        {
+          "heading": "Define the operating requirement",
+          "body": "Bring collection, payout, currency and reporting questions into one brief."
+        },
+        {
+          "heading": "Beyond the initial focus",
+          "body": "Tell us which other Latin American markets matter to your operation."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "africa": {
+      "path": "/markets/africa",
+      "eyebrow": "AFRICA",
+      "h1": "Africa. Start with the local detail.",
+      "summary": "Explore Ghana and Kenya through their own currencies, mobile money context and operating requirements.",
+      "primaryCta": {
+        "label": "Explore a market",
+        "href": "/markets"
+      },
+      "sections": [
+        {
+          "heading": "Ghana / GHS",
+          "body": "Start with the mobile money landscape and the required direction of funds."
+        },
+        {
+          "heading": "Kenya / KES",
+          "body": "Explore M-PESA as local context and define the recipient or customer journey."
+        },
+        {
+          "heading": "Local detail matters",
+          "body": "Confirm fields, references, event meanings and reconciliation for each country."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "india": {
+      "path": "/markets/india",
+      "eyebrow": "INDIA",
+      "h1": "India. Build around the local flow.",
+      "summary": "Start with the collection or payout scenario, local fields and INR reporting. Confirm the method, merchant scope and operating responsibilities before launch.",
+      "primaryCta": {
+        "label": "Add India to your brief",
+        "href": "/contact",
+        "marketIds": [
+          "india"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Local method landscape",
+          "body": "UPI, IMPS, NEFT. These are market context references. VolumeRail availability is subject to confirmation."
+        },
+        {
+          "heading": "Choose the flow",
+          "body": "Add pay-ins, payouts or settlement to your brief. If you are still exploring, you can say so."
+        },
+        {
+          "heading": "Questions for the setup",
+          "body": "Confirm required fields, merchant eligibility, currencies, operating responsibilities and the record of the outcome."
+        },
+        {
+          "heading": "Build around the local detail",
+          "body": "Add this country to your brief and continue with the same context."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "peru": {
+      "path": "/markets/peru",
+      "eyebrow": "PERU",
+      "h1": "Peru. Build around the local flow.",
+      "summary": "Plan the PEN flow around local customer and recipient behaviour. Confirm how each proposed method connects to your operating model.",
+      "primaryCta": {
+        "label": "Add Peru to your brief",
+        "href": "/contact",
+        "marketIds": [
+          "peru"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Local method landscape",
+          "body": "Yape, Plin. These are market context references. VolumeRail availability is subject to confirmation."
+        },
+        {
+          "heading": "Choose the flow",
+          "body": "Add pay-ins, payouts or settlement to your brief. If you are still exploring, you can say so."
+        },
+        {
+          "heading": "Questions for the setup",
+          "body": "Confirm required fields, merchant eligibility, currencies, operating responsibilities and the record of the outcome."
+        },
+        {
+          "heading": "Build around the local detail",
+          "body": "Add this country to your brief and continue with the same context."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "ghana": {
+      "path": "/markets/ghana",
+      "eyebrow": "GHANA",
+      "h1": "Ghana. Build around the local flow.",
+      "summary": "Define the GHS collection or payout requirement and the mobile money context. Agree the provider scope, references and confirmation process.",
+      "primaryCta": {
+        "label": "Add Ghana to your brief",
+        "href": "/contact",
+        "marketIds": [
+          "ghana"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Local method landscape",
+          "body": "Mobile money. These are market context references. VolumeRail availability is subject to confirmation."
+        },
+        {
+          "heading": "Choose the flow",
+          "body": "Add pay-ins, payouts or settlement to your brief. If you are still exploring, you can say so."
+        },
+        {
+          "heading": "Questions for the setup",
+          "body": "Confirm required fields, merchant eligibility, currencies, operating responsibilities and the record of the outcome."
+        },
+        {
+          "heading": "Build around the local detail",
+          "body": "Add this country to your brief and continue with the same context."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "kenya": {
+      "path": "/markets/kenya",
+      "eyebrow": "KENYA",
+      "h1": "Kenya. Build around the local flow.",
+      "summary": "Define the KES flow and the role of mobile money or bank transfers. Confirm recipient data, event meanings and reconciliation requirements.",
+      "primaryCta": {
+        "label": "Add Kenya to your brief",
+        "href": "/contact",
+        "marketIds": [
+          "kenya"
+        ]
+      },
+      "sections": [
+        {
+          "heading": "Local method landscape",
+          "body": "M-PESA. These are market context references. VolumeRail availability is subject to confirmation."
+        },
+        {
+          "heading": "Choose the flow",
+          "body": "Add pay-ins, payouts or settlement to your brief. If you are still exploring, you can say so."
+        },
+        {
+          "heading": "Questions for the setup",
+          "body": "Confirm required fields, merchant eligibility, currencies, operating responsibilities and the record of the outcome."
+        },
+        {
+          "heading": "Build around the local detail",
+          "body": "Add this country to your brief and continue with the same context."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "compare": {
+      "path": "/markets/compare",
+      "eyebrow": "COMPARE MARKET SETUP",
+      "h1": "Compare the setup. Keep the context.",
+      "summary": "Compare up to three countries by operating context. Unknown availability stays visible.",
+      "primaryCta": {
+        "label": "Add selection to your brief",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Compare the setup",
+          "body": "Currency, local method context, direction of funds, scope to confirm and source context."
+        },
+        {
+          "heading": "Keep the useful choices",
+          "body": "Add any selected countries to your brief, then review the products you need."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "industries": {
+      "path": "/industries",
+      "eyebrow": "INDUSTRIES",
+      "h1": "Built around the way your business operates.",
+      "summary": "Start with your business model, the customer journey and the countries involved.",
+      "primaryCta": {
+        "label": "Discuss your business model",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "iGaming",
+          "body": "Discuss player collection, withdrawals and reporting requirements alongside jurisdiction and eligibility."
+        },
+        {
+          "heading": "Digital businesses",
+          "body": "Define online collection, platform payouts and settlement around the operation."
+        },
+        {
+          "heading": "A different model?",
+          "body": "Describe it in the brief so the scope can be assessed."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "igaming": {
+      "path": "/industries/igaming",
+      "eyebrow": "IGAMING",
+      "h1": "A payment flow built around the player journey.",
+      "summary": "Plan payment flows around player journeys, merchant scope and the jurisdictions involved.",
+      "primaryCta": {
+        "label": "Discuss your operating model",
+        "href": "/contact",
+        "industryId": "igaming"
+      },
+      "sections": [
+        {
+          "heading": "Collection and withdrawals",
+          "body": "Map deposits and outgoing funds as separate operating scenarios with their own fields and records."
+        },
+        {
+          "heading": "Eligibility and operating scope",
+          "body": "Merchant acceptance, methods and conditions require assessment. Share your business model and jurisdictions."
+        },
+        {
+          "heading": "Records that support operations",
+          "body": "Agree payment references, event meanings, exceptions and reconciliation requirements."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Merchant eligibility policy and approved industry positioning"
+      ]
+    },
+    "digital": {
+      "path": "/industries/digital-businesses",
+      "eyebrow": "DIGITAL BUSINESSES",
+      "h1": "Local payment context for digital businesses.",
+      "summary": "Connect customer collection, outgoing funds and settlement to your digital operation.",
+      "primaryCta": {
+        "label": "Discuss your operating model",
+        "href": "/contact",
+        "industryId": "digital-businesses"
+      },
+      "sections": [
+        {
+          "heading": "Online collection",
+          "body": "Define what is being sold, who pays and the local customer journey."
+        },
+        {
+          "heading": "Platform and business payouts",
+          "body": "Describe recipients, payment purpose and required records."
+        },
+        {
+          "heading": "A connected operating brief",
+          "body": "Carry target markets, products and integration requirements into the same conversation."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "developers": {
+      "path": "/developers",
+      "eyebrow": "DEVELOPERS",
+      "h1": "Make the flow understandable.",
+      "summary": "Plan the integration around events, records and real operating requirements.",
+      "primaryCta": {
+        "label": "Discuss the technical scope",
+        "href": "/developers/integration-guide",
+        "purpose": "technical"
+      },
+      "sections": [
+        {
+          "heading": "Start with the operating model.",
+          "body": "Use the integration guide to align scope, required fields and dependencies."
+        },
+        {
+          "heading": "Design for the states in between.",
+          "body": "Agree the meaning of pending, confirmed and exception states before connecting systems."
+        },
+        {
+          "heading": "Your integration brief.",
+          "body": "Bring market and flow, required fields, event handling, reporting, test and launch criteria."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "guide": {
+      "path": "/developers/integration-guide",
+      "eyebrow": "INTEGRATION GUIDE",
+      "h1": "Start with the integration scope.",
+      "summary": "A planning guide for the integration conversation. The final API and environment contract is agreed separately.",
+      "primaryCta": {
+        "label": "Prepare the technical brief",
+        "href": "/contact",
+        "purpose": "technical"
+      },
+      "sections": [
+        {
+          "heading": "1. Define the operating scope",
+          "body": "List countries, direction of funds, counterparties, currencies and responsibility for each stage."
+        },
+        {
+          "heading": "2. Agree data and references",
+          "body": "Identify required fields, identifiers, validation rules and the reference shared across systems."
+        },
+        {
+          "heading": "3. Agree events and recovery",
+          "body": "Define authoritative statuses, acknowledgement, duplicate handling, retries and manual escalation."
+        },
+        {
+          "heading": "4. Agree reporting",
+          "body": "Map gross, fees, FX, net values, timestamps and reconciliation responsibilities where applicable."
+        },
+        {
+          "heading": "5. Test and launch",
+          "body": "Agree positive, exception, duplicate and recovery scenarios with the actual integration contract."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "lifecycle": {
+      "path": "/developers/payment-lifecycle",
+      "eyebrow": "PAYMENT LIFECYCLE",
+      "h1": "Keep the instruction connected to the outcome.",
+      "summary": "A conceptual model for discussing instructions, processing, confirmation and exceptions.",
+      "primaryCta": {
+        "label": "Discuss the state model",
+        "href": "/contact",
+        "purpose": "technical"
+      },
+      "sections": [
+        {
+          "heading": "Instruction",
+          "body": "An instruction being received is distinct from a payment being completed."
+        },
+        {
+          "heading": "Processing",
+          "body": "A pending state records work in progress. Its expected transitions and escalation rules must be agreed."
+        },
+        {
+          "heading": "Confirmation",
+          "body": "Define the authoritative event and record that your operation uses to recognise the outcome."
+        },
+        {
+          "heading": "Exceptions",
+          "body": "Agree rejection, failure, reversal and unresolved states where they apply. Do not collapse them into one visual success state."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "webhooks": {
+      "path": "/developers/webhooks",
+      "eyebrow": "EVENTS AND WEBHOOKS",
+      "h1": "Make a change of state explicit.",
+      "summary": "Plan event delivery and recovery using the actual event contract agreed for your integration.",
+      "primaryCta": {
+        "label": "Request current integration materials",
+        "href": "/contact",
+        "purpose": "technical"
+      },
+      "sections": [
+        {
+          "heading": "Identity and authenticity",
+          "body": "Agree event IDs, signing or authentication, secret rotation and accepted verification rules."
+        },
+        {
+          "heading": "Duplicates and ordering",
+          "body": "Design consumers to recognise repeated events and tolerate the documented ordering behaviour."
+        },
+        {
+          "heading": "Acknowledgement and retry",
+          "body": "Agree response codes, timeout boundaries, retry policy and operational ownership."
+        },
+        {
+          "heading": "Recovery and observability",
+          "body": "Record safe correlation IDs and provide a route to investigate missing or unresolved events."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Replace planning guidance with versioned signed integration details before labelling API documentation"
+      ]
+    },
+    "reconciliation": {
+      "path": "/developers/reconciliation",
+      "eyebrow": "RECONCILIATION",
+      "h1": "Connect the records before closing the period.",
+      "summary": "Bring payment references and financial records into a shared operating view.",
+      "primaryCta": {
+        "label": "Discuss reporting requirements",
+        "href": "/contact",
+        "purpose": "technical"
+      },
+      "sections": [
+        {
+          "heading": "Choose the record of truth",
+          "body": "Agree which reports or events govern the financial and operational record."
+        },
+        {
+          "heading": "Map identifiers and amounts",
+          "body": "Confirm shared references, currency, timestamps and the meaning of gross, fees and net where applicable."
+        },
+        {
+          "heading": "Handle differences",
+          "body": "Define how missing, delayed, duplicated or reversed entries are identified and resolved."
+        },
+        {
+          "heading": "Agree the close",
+          "body": "Define reporting periods, cutoffs and responsibility for reconciliation under the actual arrangement."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "partners": {
+      "path": "/partners",
+      "eyebrow": "PARTNERS",
+      "h1": "Better connected. Clearly scoped.",
+      "summary": "Bring a clear market, capability or operating contribution to the conversation.",
+      "primaryCta": {
+        "label": "Start a partner enquiry",
+        "href": "/contact",
+        "purpose": "partner"
+      },
+      "sections": [
+        {
+          "heading": "Payment providers",
+          "body": "Describe country scope, methods, role and integration requirements."
+        },
+        {
+          "heading": "Commercial partners",
+          "body": "Describe your audience, markets and the proposed referral or distribution model."
+        },
+        {
+          "heading": "Technology partners",
+          "body": "Describe your platform, integration surface and the operating problem you want to solve."
+        },
+        {
+          "heading": "Start with a partner brief",
+          "body": "Select your partner type and share enough context for the next conversation."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "company": {
+      "path": "/company",
+      "eyebrow": "COMPANY",
+      "h1": "Built around the flow.",
+      "summary": "VolumeRail is building its payment proposition around local market detail and a clear operating flow.",
+      "primaryCta": {
+        "label": "Discuss your flow",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Built around the flow",
+          "body": "Connect collection, outgoing funds and settlement as a coherent operating discussion."
+        },
+        {
+          "heading": "Local detail before broad claims",
+          "body": "Define the country, method and responsibilities behind every proposed setup."
+        },
+        {
+          "heading": "A clear next step",
+          "body": "Turn exploration into a brief with markets, products and business context."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Approve legal entity, operating role, company facts and public contacts"
+      ]
+    },
+    "trust": {
+      "path": "/trust",
+      "eyebrow": "OPERATING TRUST",
+      "h1": "Clarity before the first flow.",
+      "summary": "Understand the responsibilities, evidence and operating questions behind the proposed setup.",
+      "primaryCta": {
+        "label": "Request due-diligence information",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Who does what",
+          "body": "Confirm the merchant, VolumeRail and partner responsibilities at each stage."
+        },
+        {
+          "heading": "What is confirmed",
+          "body": "Availability, eligibility, timing and commercial terms are scoped to the agreed arrangement."
+        },
+        {
+          "heading": "What supports each claim",
+          "body": "Published credentials and capabilities must have a current source, clear scope and permission to publish."
+        },
+        {
+          "heading": "Request the relevant detail",
+          "body": "Describe your markets and flow so the applicable operating and security information can be discussed."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Entity model, responsibility matrix and evidence records"
+      ]
+    },
+    "resources": {
+      "path": "/resources",
+      "eyebrow": "RESOURCES",
+      "h1": "Useful detail for the next market.",
+      "summary": "Practical reading for local markets, payment flows and implementation planning.",
+      "primaryCta": {
+        "label": "Explore a guide",
+        "href": "/resources/local-payment-methods"
+      },
+      "sections": [
+        {
+          "heading": "Local payment methods",
+          "body": "Separate scheme context, provider access and merchant eligibility."
+        },
+        {
+          "heading": "Pay-ins and payouts",
+          "body": "Understand the direction of funds and the questions each scenario raises."
+        },
+        {
+          "heading": "Settlement readiness",
+          "body": "Prepare currencies, destinations, records and operating questions before implementation."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "guide_methods": {
+      "path": "/resources/local-payment-methods",
+      "eyebrow": "LOCAL PAYMENT METHODS",
+      "h1": "A local method is more than a logo.",
+      "summary": "A familiar local method name is a starting point for a discussion, not a complete operating setup.",
+      "primaryCta": {
+        "label": "Build your market brief",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "1. Start with the country",
+          "body": "Identify the currency, payer or recipient and the direction of funds."
+        },
+        {
+          "heading": "2. Understand the method",
+          "body": "Use primary scheme or provider material to understand the local context."
+        },
+        {
+          "heading": "3. Confirm the access scope",
+          "body": "Ask who provides access, which merchant models are eligible and what conditions apply."
+        },
+        {
+          "heading": "4. Agree the operating record",
+          "body": "Confirm references, event meanings, exception handling and reconciliation before launch."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "guide_flows": {
+      "path": "/resources/pay-ins-vs-payouts",
+      "eyebrow": "PAY-INS AND PAYOUTS",
+      "h1": "Two directions. Different operating questions.",
+      "summary": "The direction of funds changes the data, user journey and operating questions.",
+      "primaryCta": {
+        "label": "Choose your flow",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Pay-ins",
+          "body": "Start with how a customer initiates payment and how the business recognises the result."
+        },
+        {
+          "heading": "Payouts",
+          "body": "Start with the recipient, required details, payment purpose and confirmation."
+        },
+        {
+          "heading": "The connection",
+          "body": "Use shared identifiers and an agreed reporting model when the flows belong to the same operation."
+        },
+        {
+          "heading": "Build a useful brief",
+          "body": "List the countries and products involved, then describe the customer and recipient journeys."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "guide_settlement": {
+      "path": "/resources/settlement-readiness",
+      "eyebrow": "SETTLEMENT READINESS",
+      "h1": "Define completion before the first settlement.",
+      "summary": "Prepare the questions that connect an operating balance to its destination and record.",
+      "primaryCta": {
+        "label": "Prepare the settlement scope",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Currency and destination",
+          "body": "Define the desired currency and destination. Treat preferences as requirements for discussion, not assumed availability."
+        },
+        {
+          "heading": "Timing and conditions",
+          "body": "Agree scheduling, cutoffs, eligibility and dependencies in the actual arrangement."
+        },
+        {
+          "heading": "Amounts and reporting",
+          "body": "Confirm the meaning of gross, fees, FX and net where applicable."
+        },
+        {
+          "heading": "Differences and close",
+          "body": "Define escalation, unresolved entries and ownership of the final reconciliation."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "contact": {
+      "path": "/contact",
+      "eyebrow": "DISCUSS YOUR FLOW",
+      "h1": "Let’s map your next move.",
+      "summary": "A few details to help us understand your goals and discuss the right operating scope.",
+      "primaryCta": {
+        "label": "Send enquiry",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Markets",
+          "body": "Select your countries, add another market or choose Not sure yet."
+        },
+        {
+          "heading": "Products",
+          "body": "Select pay-ins, payouts or settlement. You can also say you are still exploring."
+        },
+        {
+          "heading": "Business",
+          "body": "Share your company or project and contact email. Add more context if it helps."
+        },
+        {
+          "heading": "Review",
+          "body": "Check the brief, read the Privacy Notice and send your enquiry."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Durable enquiry handler, owner, privacy notice and delivery destination"
+      ]
+    },
+    "confirmation": {
+      "path": "/contact/confirmation",
+      "eyebrow": "ENQUIRY RECEIVED",
+      "h1": "Your enquiry has been received.",
+      "summary": "Your enquiry has been accepted. Keep the reference below if you need to follow up.",
+      "primaryCta": {
+        "label": "Return to your brief",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "What happens next",
+          "body": "Your brief gives the team the context for the next conversation."
+        },
+        {
+          "heading": "Need to add something?",
+          "body": "Use the verified support route and quote your enquiry reference."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Show only after server-accepted receipt; no public personal data"
+      ]
+    },
+    "support": {
+      "path": "/support",
+      "eyebrow": "SUPPORT",
+      "h1": "Find the right next step.",
+      "summary": "Choose the right route for a commercial, technical or existing relationship question.",
+      "primaryCta": {
+        "label": "Contact support",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "A new payment setup",
+          "body": "Build a payment brief with the countries and products you want to discuss."
+        },
+        {
+          "heading": "An integration question",
+          "body": "Choose Technical and include a safe reference or a short description."
+        },
+        {
+          "heading": "An existing enquiry",
+          "body": "Choose Support and include your enquiry reference. Do not include passwords, bank details or identity documents."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": [
+        "Verified support destination or shared enquiry handler"
+      ]
+    },
+    "privacy": {
+      "path": "/legal/privacy",
+      "eyebrow": "PRIVACY",
+      "h1": "Privacy notice.",
+      "summary": "Read how the responsible entity handles information submitted through this website.",
+      "primaryCta": {
+        "label": "Contact the data controller",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Controller and contact",
+          "body": "Owner-required content: approved legal controller, address and privacy contact."
+        },
+        {
+          "heading": "Information and purpose",
+          "body": "Owner-required content: fields, purposes, legal basis, recipients and international transfers."
+        },
+        {
+          "heading": "Retention and rights",
+          "body": "Owner-required content: actual retention periods, user rights and contact procedure."
+        },
+        {
+          "heading": "Version and effective date",
+          "body": "Owner-required content: approved notice version and effective date."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "owner_required",
+      "ownerGates": [
+        "Approved legal notice with actual controller and processing details"
+      ]
+    },
+    "cookies": {
+      "path": "/legal/cookies",
+      "eyebrow": "COOKIES",
+      "h1": "Cookie information.",
+      "summary": "Understand the storage used for essential website functions and any optional analytics.",
+      "primaryCta": {
+        "label": "Manage preferences",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Essential storage",
+          "body": "Owner-required inventory: technical names, purposes and lifetimes used by the final implementation."
+        },
+        {
+          "heading": "Optional preferences",
+          "body": "Optional analytics and marketing categories remain off until a valid choice where required."
+        },
+        {
+          "heading": "Change your choice",
+          "body": "Provide a working preference control and accurately describe its effect."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "owner_required",
+      "ownerGates": [
+        "Actual cookie and storage inventory with approved notice"
+      ]
+    },
+    "terms": {
+      "path": "/legal/terms",
+      "eyebrow": "WEBSITE TERMS",
+      "h1": "Website terms.",
+      "summary": "Read the terms applicable to using this website and contacting the responsible entity.",
+      "primaryCta": {
+        "label": "Contact VolumeRail",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Responsible entity",
+          "body": "Owner-required content: legal identity, jurisdiction and contact."
+        },
+        {
+          "heading": "Website use",
+          "body": "Owner-required content: approved scope, acceptable use and website content terms."
+        },
+        {
+          "heading": "Payment services",
+          "body": "Any service arrangement is governed by the relevant agreement and confirmed operating scope."
+        },
+        {
+          "heading": "Governing provisions",
+          "body": "Owner-required content: approved liability, law, dispute and effective-date provisions."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "owner_required",
+      "ownerGates": [
+        "Approved terms for actual entity and jurisdiction"
+      ]
+    },
+    "not_found": {
+      "path": "/404",
+      "eyebrow": "PAGE NOT FOUND",
+      "h1": "Find your flow.",
+      "summary": "This page could not be found. Your next step can still be clear.",
+      "primaryCta": {
+        "label": "Explore markets",
+        "href": "/markets"
+      },
+      "sections": [
+        {
+          "heading": "Explore markets",
+          "body": "Return to the market directory and keep building your brief."
+        },
+        {
+          "heading": "Discuss your flow",
+          "body": "Go directly to a payment enquiry."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "editorial_review",
+      "ownerGates": []
+    },
+    "api": {
+      "path": "/developers/api-reference",
+      "eyebrow": "API REFERENCE",
+      "h1": "API reference.",
+      "summary": "Versioned API reference will be linked when an approved integration contract is available.",
+      "primaryCta": {
+        "label": "Request current integration materials",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Reserved destination",
+          "body": "This route stays hidden until the real reference, authentication, environments and examples are connected."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "reserved",
+      "ownerGates": [
+        "Approved API reference connection"
+      ]
+    },
+    "status": {
+      "path": "/status",
+      "eyebrow": "SERVICE STATUS",
+      "h1": "Service status.",
+      "summary": "Service status will be linked through a verified operational destination.",
+      "primaryCta": {
+        "label": "Open verified status service",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Reserved destination",
+          "body": "This route stays hidden until a monitored status service and ownership are confirmed."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "reserved",
+      "ownerGates": [
+        "Verified status destination and incident owner"
+      ]
+    },
+    "stories": {
+      "path": "/customer-stories",
+      "eyebrow": "CUSTOMER STORIES",
+      "h1": "Evidence from real operating journeys.",
+      "summary": "Customer stories will appear when the customer, outcome and publishing permission are verified.",
+      "primaryCta": {
+        "label": "Read a verified story",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Reserved collection",
+          "body": "Do not populate this page with invented customers, logos or performance figures."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "reserved",
+      "ownerGates": [
+        "At least one approved, evidenced customer story"
+      ]
+    },
+    "story": {
+      "path": "/customer-stories/[slug]",
+      "eyebrow": "CUSTOMER STORY",
+      "h1": "A verified operating story.",
+      "summary": "A story template for an approved customer outcome.",
+      "primaryCta": {
+        "label": "Discuss a similar scope",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "The operating challenge",
+          "body": "Approved customer context and market scope."
+        },
+        {
+          "heading": "The setup",
+          "body": "Approved products, integration and responsibility split."
+        },
+        {
+          "heading": "The outcome",
+          "body": "Evidence-backed outcome, dates, conditions and customer permission."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "reserved",
+      "ownerGates": [
+        "ApprovedCase with evidence and permission"
+      ]
+    },
+    "pricing": {
+      "path": "/pricing",
+      "eyebrow": "COMMERCIAL SETUP",
+      "h1": "Commercial terms built around the scope.",
+      "summary": "Commercial scope depends on the market, method, volume and operating arrangement.",
+      "primaryCta": {
+        "label": "Request a scoped proposal",
+        "href": "/contact"
+      },
+      "sections": [
+        {
+          "heading": "Pricing dimensions",
+          "body": "Market and method, direction of funds, volume, currency, settlement and integration requirements."
+        },
+        {
+          "heading": "Discuss your requirements",
+          "body": "Use a brief to establish the relevant commercial scope."
+        }
+      ],
+      "faq": [],
+      "publicationMode": "reserved",
+      "ownerGates": [
+        "Approved pricebook or commercial policy; do not publish invented fees"
+      ]
+    }
+  }
+}

@@ -1,0 +1,201 @@
+[
+  {
+    "id": "india",
+    "iso2": "IN",
+    "name": "India",
+    "region": "asia",
+    "currency": "INR",
+    "currencyName": "Indian Rupee",
+    "timeZone": "Asia/Kolkata",
+    "marketStatus": "focus",
+    "overview": "Start with the collection or payout scenario, local fields and INR reporting. Confirm the method, merchant scope and operating responsibilities before launch.",
+    "methodIds": [
+      "upi",
+      "imps",
+      "neft"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      }
+    ],
+    "setupQuestions": [
+      "Which direction of funds do you need?",
+      "Which customer or recipient fields can you provide?",
+      "How should events and records reach your team?",
+      "Which settlement currency and timing should we discuss?"
+    ],
+    "reviewedAt": null,
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "peru",
+    "iso2": "PE",
+    "name": "Peru",
+    "region": "latam",
+    "currency": "PEN",
+    "currencyName": "Peruvian Sol",
+    "timeZone": "America/Lima",
+    "marketStatus": "focus",
+    "overview": "Plan the PEN flow around local customer and recipient behaviour. Confirm how each proposed method connects to your operating model.",
+    "methodIds": [
+      "yape",
+      "plin"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      }
+    ],
+    "setupQuestions": [
+      "Which direction of funds do you need?",
+      "Which customer or recipient fields can you provide?",
+      "How should events and records reach your team?",
+      "Which settlement currency and timing should we discuss?"
+    ],
+    "reviewedAt": null,
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "ghana",
+    "iso2": "GH",
+    "name": "Ghana",
+    "region": "africa",
+    "currency": "GHS",
+    "currencyName": "Ghanaian Cedi",
+    "timeZone": "Africa/Accra",
+    "marketStatus": "focus",
+    "overview": "Define the GHS collection or payout requirement and the mobile money context. Agree the provider scope, references and confirmation process.",
+    "methodIds": [
+      "ghana-mobile-money"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "ghana",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "ghana",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "ghana",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      }
+    ],
+    "setupQuestions": [
+      "Which direction of funds do you need?",
+      "Which customer or recipient fields can you provide?",
+      "How should events and records reach your team?",
+      "Which settlement currency and timing should we discuss?"
+    ],
+    "reviewedAt": null,
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "kenya",
+    "iso2": "KE",
+    "name": "Kenya",
+    "region": "africa",
+    "currency": "KES",
+    "currencyName": "Kenyan Shilling",
+    "timeZone": "Africa/Nairobi",
+    "marketStatus": "focus",
+    "overview": "Define the KES flow and the role of mobile money or bank transfers. Confirm recipient data, event meanings and reconciliation requirements.",
+    "methodIds": [
+      "mpesa"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "kenya",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "kenya",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      },
+      {
+        "state": "unverified",
+        "countryId": "kenya",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": []
+      }
+    ],
+    "setupQuestions": [
+      "Which direction of funds do you need?",
+      "Which customer or recipient fields can you provide?",
+      "How should events and records reach your team?",
+      "Which settlement currency and timing should we discuss?"
+    ],
+    "reviewedAt": null,
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  }
+]

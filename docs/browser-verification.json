@@ -1,0 +1,454 @@
+{
+  "checkedAt": "2026-11-06T11:04:40.229Z",
+  "method": "Live browser DOM checks after viewport layout settled",
+  "checks": [
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/payments/payouts",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/markets",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/markets/kenya",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/developers",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/developers/integration-guide",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/contact",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    },
+    {
+      "actualWidth": 320,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 320,
+      "unlabelledFields": 0,
+      "requestedWidth": 320
+    },
+    {
+      "actualWidth": 375,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 375,
+      "unlabelledFields": 0,
+      "requestedWidth": 375
+    },
+    {
+      "actualWidth": 390,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 390,
+      "unlabelledFields": 0,
+      "requestedWidth": 390
+    },
+    {
+      "actualWidth": 768,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 768,
+      "unlabelledFields": 0,
+      "requestedWidth": 768
+    },
+    {
+      "actualWidth": 1024,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 1024,
+      "unlabelledFields": 0,
+      "requestedWidth": 1024
+    },
+    {
+      "actualWidth": 1440,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 1440,
+      "unlabelledFields": 0,
+      "requestedWidth": 1440
+    },
+    {
+      "actualWidth": 1920,
+      "h1": 1,
+      "route": "/contact/basic",
+      "scrollWidth": 1920,
+      "unlabelledFields": 0,
+      "requestedWidth": 1920
+    }
+  ]
+}

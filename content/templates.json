@@ -1,0 +1,741 @@
+[
+  {
+    "id": "T01",
+    "name": "Home",
+    "goal": "Объяснить предложение и дать два сильных следующих действия.",
+    "layout": "aperture_home",
+    "sections": [
+      "Hero: MOVE VALUE. / OPEN MARKETS.; Market Lens справа; Explore markets.",
+      "Flow Anatomy: инструкция, обработка, подтверждение; отдельные переходы к продуктам.",
+      "Build the brief: рынки и продукты без персональных полей.",
+      "Clarity before the first flow: scope, integration, operating conditions.",
+      "Context CTA и полный footer."
+    ],
+    "componentIds": [
+      "C01",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C14",
+      "C15",
+      "C19",
+      "C25",
+      "C26",
+      "C39"
+    ],
+    "states": [
+      "initial",
+      "region_selected",
+      "brief_populated",
+      "motion_reduced",
+      "webgl_unavailable"
+    ],
+    "mobile": "Заголовок переносится по словам; разрез становится горизонтальным; Market Lens идёт сразу после вступления.",
+    "publicationRule": "Нет клиентского logo wall и чисел без EvidenceRecord. Рынки представлены как focus до подтверждения доступности."
+  },
+  {
+    "id": "T02",
+    "name": "Product index",
+    "goal": "Помочь выбрать направление денег.",
+    "layout": "editorial_product_index",
+    "sections": [
+      "Короткий hero: One operating flow. / Three connected parts.",
+      "Три открытые строки Pay-ins, Payouts, Settlement: задача, результат для обсуждения, ссылка.",
+      "Разделение обязанностей You define / We confirm.",
+      "FAQ о запуске и интеграции.",
+      "CTA с возможностью выбрать несколько продуктов."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C06",
+      "C20",
+      "C24",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "initial",
+      "product_selected",
+      "no_confirmed_capability"
+    ],
+    "mobile": "Строки становятся вертикальными секциями; названия и CTA остаются в начале каждой.",
+    "publicationRule": "Описание результата не содержит несуществующих SLA, цен и автоматических действий."
+  },
+  {
+    "id": "T03",
+    "name": "Product detail",
+    "goal": "Объяснить конкретный продукт, его контекст и вопросы запуска.",
+    "layout": "aperture_product",
+    "sections": [
+      "Hero с задачей продукта, CTA Add to brief и иллюстративным operating specimen.",
+      "Операционный путь Scope / Process / Confirm; исключения показаны наравне с нормальным путём.",
+      "Country links с сохранением productId.",
+      "Integration scope: поля, события, отчётность.",
+      "FAQ и предметный CTA по выбранному продукту."
+    ],
+    "componentIds": [
+      "C01",
+      "C04",
+      "C07",
+      "C11",
+      "C14",
+      "C20",
+      "C22",
+      "C24",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "pay_in",
+      "payout",
+      "settlement",
+      "example_pending",
+      "brief_added",
+      "availability_unverified"
+    ],
+    "mobile": "Текст -> specimen -> этапы; нет закреплённого canvas. Добавление в бриф доступно рядом с H1.",
+    "publicationRule": "Пример всегда Illustrative flow; денежная сумма и successful status не имитируют реальный платёж."
+  },
+  {
+    "id": "T04",
+    "name": "Method catalogue",
+    "goal": "Разделить местный контекст и доступность метода через VolumeRail.",
+    "layout": "method_catalogue",
+    "sections": [
+      "Hero: The right method starts with the market.",
+      "Фильтры по стране, типу метода, направлению и текстовому поиску.",
+      "Открытые строки метода: provider/scheme, страна, категория, context source, VolumeRail status.",
+      "Раскрытие requirements и ссылка на профиль страны.",
+      "CTA для неподтверждённого метода."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C08",
+      "C10",
+      "C11",
+      "C30",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "initial",
+      "filtered",
+      "no_results",
+      "unverified",
+      "verified_with_conditions",
+      "stale"
+    ],
+    "mobile": "Фильтры в раскрываемой секции; выбранные значения видны в summary, результаты обычным списком.",
+    "publicationRule": "Источник схемы не является доказательством партнёрства. Логотипы провайдеров показываются только с корректным правом использования."
+  },
+  {
+    "id": "T05",
+    "name": "Market / region directory",
+    "goal": "Найти рынок и сравнить setup перед обращением.",
+    "layout": "market_directory",
+    "sections": [
+      "Hero + поиск страны/валюты; region и flow filters.",
+      "Country rows: код, имя, регион, валюта, статус, Explore и отдельный Compare.",
+      "Toolbar сравнения до трёх стран.",
+      "Краткое пояснение разных местных условий.",
+      "Brief Rail и CTA для Other market."
+    ],
+    "componentIds": [
+      "C01",
+      "C04",
+      "C08",
+      "C09",
+      "C10",
+      "C13",
+      "C14",
+      "C30",
+      "C25",
+      "C26",
+      "C39"
+    ],
+    "states": [
+      "all",
+      "region_preset",
+      "filtered",
+      "selected_1",
+      "selected_2",
+      "selected_3",
+      "limit_reached",
+      "no_results",
+      "stale_data"
+    ],
+    "mobile": "Строки в одну колонку; Compare checkbox отдельно от country link. Region hub имеет собственное вступление и FAQ.",
+    "publicationRule": "Региональные URL не дублируют общий каталог без собственного содержания. Unknown не означает supported."
+  },
+  {
+    "id": "T06",
+    "name": "Country profile",
+    "goal": "Дать полезный страновой контекст и сформировать предметный brief.",
+    "layout": "country_profile",
+    "sections": [
+      "Breadcrumb + страна, ISO currency, status, Add country to brief.",
+      "Country summary: регион, валюта, продукты для обсуждения и дата проверки.",
+      "Local method landscape с первичными источниками.",
+      "Flow choices и условия для обсуждения: поля, объём, валюты, подтверждение.",
+      "Related markets, FAQ, context CTA."
+    ],
+    "componentIds": [
+      "C01",
+      "C04",
+      "C10",
+      "C11",
+      "C12",
+      "C14",
+      "C15",
+      "C24",
+      "C25",
+      "C26",
+      "C33",
+      "C39"
+    ],
+    "states": [
+      "focus_only",
+      "verified_partial",
+      "verified_full",
+      "stale",
+      "unsupported_flow",
+      "brief_added"
+    ],
+    "mobile": "Currency code декоративный и не расширяет viewport; все условия идут после краткого summary, кнопка Add доступна рано.",
+    "publicationRule": "Methods market context и VolumeRail availability имеют раздельные записи. Время и лимиты не публикуются без источника."
+  },
+  {
+    "id": "T07",
+    "name": "Market comparison",
+    "goal": "Сопоставить максимум три рынка по одинаковым критериям.",
+    "layout": "comparison_matrix",
+    "sections": [
+      "Короткий title и выбранные страны с Remove.",
+      "Матрица: currency, products, method context, fields to scope, settlement setup, updated date.",
+      "Явное Unknown/To confirm; источник у подтверждённого факта.",
+      "Add selection to brief; Edit selection.",
+      "Empty state с возвратом в Markets."
+    ],
+    "componentIds": [
+      "C01",
+      "C08",
+      "C10",
+      "C13",
+      "C14",
+      "C30",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "empty",
+      "one_market",
+      "two_markets",
+      "three_markets",
+      "invalid_codes",
+      "stale"
+    ],
+    "mobile": "Матрица группируется по критерию: затем страны с подписанными значениями. Горизонтальный скролл не является единственным способом чтения.",
+    "publicationRule": "Нет рейтинга стран, выдуманной оценки approval и калькулятора прибыли."
+  },
+  {
+    "id": "T08",
+    "name": "Industry index",
+    "goal": "Показать, какие операционные модели обсуждаются.",
+    "layout": "industry_index",
+    "sections": [
+      "Hero с понятным объяснением industry eligibility.",
+      "Открытые отраслевые входы: iGaming и Digital businesses.",
+      "Общие вопросы: merchant model, target markets, collection, outgoing payments.",
+      "Ссылка на operating approach.",
+      "CTA Discuss your business model."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C20",
+      "C24",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "initial",
+      "conditional",
+      "industry_not_listed"
+    ],
+    "mobile": "Каждая отрасль - самостоятельная секция с коротким действием, а не горизонтальная карусель.",
+    "publicationRule": "Не заявлять blanket acceptance. Список отраслей управляется подтверждённой EligibilityPolicy."
+  },
+  {
+    "id": "T09",
+    "name": "Industry detail",
+    "goal": "Связать продукт с конкретным пользовательским и операционным сценарием.",
+    "layout": "industry_detail",
+    "sections": [
+      "Hero отрасли и вопросы операционной модели.",
+      "Journey: customer instruction -> local payment -> status -> outgoing need / settlement.",
+      "Три приоритета отрасли без неподтверждённых обещаний.",
+      "Country-by-flow context и eligible setup.",
+      "Technical scope, FAQ, industry-prefilled enquiry."
+    ],
+    "componentIds": [
+      "C01",
+      "C04",
+      "C07",
+      "C12",
+      "C20",
+      "C24",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "igaming",
+      "digital_businesses",
+      "eligibility_unknown",
+      "requirements_open"
+    ],
+    "mobile": "Journey читается обычным вертикальным списком; важные условия не прячутся в hover.",
+    "publicationRule": "iGaming не смешивается с video gaming. Юрисдикция, роль мерчанта и допустимость подтверждаются отдельно."
+  },
+  {
+    "id": "T10",
+    "name": "Developer hub",
+    "goal": "Дать технической команде понятную карту интеграционного разговора.",
+    "layout": "developer_hub",
+    "sections": [
+      "Hero: Build with / a clear contract.",
+      "Четыре входа: Integration guide, Payment lifecycle, Events, Reconciliation.",
+      "Один specimen с заметным Illustrative label.",
+      "Readiness checklist: fields, state model, delivery, records.",
+      "Request current integration materials / Technical brief."
+    ],
+    "componentIds": [
+      "C01",
+      "C04",
+      "C21",
+      "C22",
+      "C20",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "overview_only",
+      "contract_available",
+      "materials_requested"
+    ],
+    "mobile": "Навигация становится компактным содержанием; code specimen прокручивается в собственной области без расширения страницы.",
+    "publicationRule": "Не публиковать вымышленные endpoints, API keys, sandbox URL или псевдо-SDK. API reference включается только из реального контракта."
+  },
+  {
+    "id": "T11",
+    "name": "Documentation article",
+    "goal": "Структурировать технический материал и держать его версию.",
+    "layout": "documentation_article",
+    "sections": [
+      "Breadcrumb и версия/дата материала.",
+      "Sidebar с текущим документом и on-page contents.",
+      "Текст, таблицы и примеры с labels Conceptual или Contract.",
+      "Секции exceptions, expected next action, records.",
+      "Предыдущий/следующий документ и Technical enquiry."
+    ],
+    "componentIds": [
+      "C01",
+      "C21",
+      "C22",
+      "C23",
+      "C25",
+      "C26",
+      "C33"
+    ],
+    "states": [
+      "conceptual",
+      "contract",
+      "stale_version",
+      "restricted_material",
+      "search_empty"
+    ],
+    "mobile": "Sidebar раскрывается кнопкой; заголовки имеют якоря и корректный scroll offset.",
+    "publicationRule": "Conceptual material никогда не выглядит как production API reference. Статусы из примера не объявляются банковской финальностью."
+  },
+  {
+    "id": "T12",
+    "name": "Partners",
+    "goal": "Направить провайдера или коммерческого партнёра в правильный scope.",
+    "layout": "partner_page",
+    "sections": [
+      "Hero Better connected. / Clearly scoped.",
+      "Типы: payment providers, commercial partners, technology teams.",
+      "You bring / We align: рынки, методы, модель ответственности, технические материалы.",
+      "Структура начала сотрудничества.",
+      "Partner-prefilled enquiry."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C20",
+      "C31",
+      "C24",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "provider",
+      "commercial",
+      "technical",
+      "other"
+    ],
+    "mobile": "Типы партнёров переключаются обычными buttons; все описания доступны клавиатурой.",
+    "publicationRule": "Не предлагать публичный депозит, трейдерский кошелёк или неописанную инвестиционную модель."
+  },
+  {
+    "id": "T13",
+    "name": "Company",
+    "goal": "Объяснить подход и фактическую организацию проекта.",
+    "layout": "company_page",
+    "sections": [
+      "Hero Built around / the flow.",
+      "Короткий narrative: local context, clear scope, connected records.",
+      "Operating principles и связь с рынками.",
+      "Подтверждённые реквизиты и роли; people section только при реальных данных.",
+      "Trust и Contact."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C19",
+      "C20",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "prelaunch",
+      "operating_entity_verified",
+      "people_available"
+    ],
+    "mobile": "Небольшие смысловые секции; нет анимированной corporate timeline без событий.",
+    "publicationRule": "Не выдумывать офисы, сотрудников, основателей, даты запуска, объёмы и лицензии."
+  },
+  {
+    "id": "T14",
+    "name": "Operating trust",
+    "goal": "Ответить на вопросы due diligence без декоративных сертификатов.",
+    "layout": "trust_page",
+    "sections": [
+      "Hero Clarity before / the first flow.",
+      "Operating model: кто отвечает за какой этап и где условия подтверждаются.",
+      "Evidence rows: scope, owner, source, reviewed date.",
+      "Data handling / support / incident contact - фактические материалы.",
+      "Request due-diligence information."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C19",
+      "C20",
+      "C24",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "approach_only",
+      "evidence_available",
+      "expired_evidence",
+      "request_required"
+    ],
+    "mobile": "Evidence rows превращаются в подписанные блоки; source link и дата не исчезают.",
+    "publicationRule": "Отсутствие сертификата не заменяется знаком certified. Проверенные факты и проектные принципы разделены."
+  },
+  {
+    "id": "T15",
+    "name": "Resource / story index",
+    "goal": "Помочь найти содержательный материал без пустого блога.",
+    "layout": "resource_index",
+    "sections": [
+      "Короткий hero и фильтр темы.",
+      "Крупный featured материал и открытый список остальных.",
+      "Тип, время чтения, дата review и автор/владелец.",
+      "Related market/product links.",
+      "Подписка только при реальном сервисе и отдельном согласии."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C23",
+      "C30",
+      "C25",
+      "C26"
+    ],
+    "states": [
+      "three_guides",
+      "no_published_content",
+      "filter_empty",
+      "stories_enabled"
+    ],
+    "mobile": "Featured и список в один столбец; заголовки не обрезаются.",
+    "publicationRule": "Не публиковать пустую ленту и фиктивные даты. Stories index зарезервирован до реального кейса."
+  },
+  {
+    "id": "T16",
+    "name": "Editorial article",
+    "goal": "Дать полезное объяснение, сохраняющее связь с продуктом.",
+    "layout": "editorial_article",
+    "sections": [
+      "Breadcrumb, title, summary, author/owner, reviewed date.",
+      "Содержание и body ограниченной ширины.",
+      "Ссылки на первичные источники и оговорённую область применимости.",
+      "Related country/product.",
+      "Context action Build your brief."
+    ],
+    "componentIds": [
+      "C01",
+      "C23",
+      "C25",
+      "C26",
+      "C33"
+    ],
+    "states": [
+      "published",
+      "needs_review",
+      "archived"
+    ],
+    "mobile": "Body 16-18 px и ограниченная мера строки; таблицы преобразуются в читабельные группы.",
+    "publicationRule": "Не выдавать общий материал за юридическую консультацию, прогноз доходности или подтверждение доступности продукта."
+  },
+  {
+    "id": "T17",
+    "name": "Commercial brief",
+    "goal": "Превратить сохранённый контекст в проверяемое обращение.",
+    "layout": "contact_wizard",
+    "sections": [
+      "Purpose и шаги Markets / Products / Business / Review.",
+      "Одна форма, выбранный контекст и краткое summary.",
+      "Редактирование секций из Review без потери данных.",
+      "Отправка с idempotency и конкретными error states.",
+      "Подтверждение только после durable acceptance."
+    ],
+    "componentIds": [
+      "C01",
+      "C14",
+      "C15",
+      "C16",
+      "C17",
+      "C27",
+      "C28",
+      "C29",
+      "C26",
+      "C39"
+    ],
+    "states": [
+      "blank",
+      "prefilled",
+      "field_error",
+      "step_error",
+      "review",
+      "submitting",
+      "accepted",
+      "uncertain",
+      "retrying",
+      "rate_limited",
+      "server_error"
+    ],
+    "mobile": "Сверху progress и краткое summary, затем поля. Sticky tray не перекрывает клавиатуру. Submit в потоке документа.",
+    "publicationRule": "Нет обязательного звонка, загрузки KYC, реквизитов и сохранения email в URL или analytics."
+  },
+  {
+    "id": "T18",
+    "name": "Confirmation",
+    "goal": "Подтвердить принятие и объяснить дальнейший шаг.",
+    "layout": "confirmation",
+    "sections": [
+      "Статус Enquiry received только по receipt.",
+      "Receipt reference и краткое объяснение review.",
+      "Без обещания срока ответа, пока оно не согласовано.",
+      "Return to markets / Start another enquiry.",
+      "При отсутствии receipt - понятная ссылка на форму."
+    ],
+    "componentIds": [
+      "C01",
+      "C18",
+      "C25",
+      "C26",
+      "C39"
+    ],
+    "states": [
+      "accepted",
+      "missing_receipt",
+      "uncertain",
+      "duplicate_acknowledged"
+    ],
+    "mobile": "Один компактный столбец; screen reader получает status без повторяющейся анимации.",
+    "publicationRule": "Простое открытие URL не создаёт ложное подтверждение отправки."
+  },
+  {
+    "id": "T19",
+    "name": "Support",
+    "goal": "Отделить операционное обращение от запроса продаж.",
+    "layout": "support_page",
+    "sections": [
+      "Короткий hero и выбор Existing merchant / Integration / Commercial.",
+      "Проверенные каналы поддержки либо форма support purpose.",
+      "Reference optional, country optional, короткое описание.",
+      "Ссылка на реальный status только если он подключён.",
+      "Понятное объяснение, какие сведения нужны."
+    ],
+    "componentIds": [
+      "C01",
+      "C16",
+      "C20",
+      "C25",
+      "C26",
+      "C36"
+    ],
+    "states": [
+      "channels_verified",
+      "form_available",
+      "status_unavailable",
+      "urgent_instruction"
+    ],
+    "mobile": "Первое действие видно сразу, формы простые, обязательный телефон не нужен.",
+    "publicationRule": "Не обещать 24/7 или emergency SLA без операционной команды. Секреты и платёжные credentials не принимаются."
+  },
+  {
+    "id": "T20",
+    "name": "Legal article",
+    "goal": "Предоставить утверждённый документ в устойчивом читаемом шаблоне.",
+    "layout": "legal_article",
+    "sections": [
+      "Title, effective date, entity/controller.",
+      "On-page contents и body.",
+      "История версии/дата изменения при наличии.",
+      "Контакт ответственной стороны.",
+      "Cookie preferences для cookie page."
+    ],
+    "componentIds": [
+      "C01",
+      "C23",
+      "C26",
+      "C37"
+    ],
+    "states": [
+      "draft_blocked",
+      "approved",
+      "superseded"
+    ],
+    "mobile": "Один столбец, доступные якоря и читабельный текст.",
+    "publicationRule": "Layout готов; юридический текст и реквизиты требуют конкретного владельца и утверждения. Фиктивный legal boilerplate не подставляется."
+  },
+  {
+    "id": "T21",
+    "name": "Not found",
+    "goal": "Вернуть человека в основной путь.",
+    "layout": "not_found",
+    "sections": [
+      "Find your flow.",
+      "Короткое объяснение и Explore markets.",
+      "Payments и Contact как дополнительные выходы.",
+      "Стандартный header/footer.",
+      "Сохранённый brief не удаляется."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C25",
+      "C26",
+      "C30"
+    ],
+    "states": [
+      "unknown_route",
+      "removed_content"
+    ],
+    "mobile": "Основной CTA без лишней графики, native 404 HTTP status.",
+    "publicationRule": "Не редиректить все неизвестные адреса молча на главную."
+  },
+  {
+    "id": "T22",
+    "name": "Commercial setup - reserved",
+    "goal": "Показать структуру коммерческого предложения, когда она утверждена.",
+    "layout": "pricing_editorial",
+    "sections": [
+      "Commercial dimensions: markets, methods, volume, operating requirements.",
+      "Подтверждённые fee items с unit/currency и scope либо scoped proposal.",
+      "Что включено и что подтверждается отдельно.",
+      "FAQ и Request a scoped proposal."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C19",
+      "C24",
+      "C25",
+      "C26",
+      "C35"
+    ],
+    "states": [
+      "reserved",
+      "scoped_only",
+      "published_pricebook"
+    ],
+    "mobile": "Строки fee items без сложной горизонтальной тарифной таблицы.",
+    "publicationRule": "Не показывать условные 0%, free или instant. Не публиковать страницу до коммерческого источника."
+  },
+  {
+    "id": "T23",
+    "name": "Customer story - reserved",
+    "goal": "Показать проверяемый результат конкретного клиента.",
+    "layout": "customer_story",
+    "sections": [
+      "Согласованные name/logo и контекст.",
+      "Challenge / setup / outcome.",
+      "Каждый результат: период, исходная база, метод измерения, ограничение.",
+      "Комментарий с разрешением владельца.",
+      "Related product и enquiry."
+    ],
+    "componentIds": [
+      "C01",
+      "C05",
+      "C19",
+      "C23",
+      "C25",
+      "C26",
+      "C34"
+    ],
+    "states": [
+      "reserved",
+      "approved",
+      "withdrawn_permission"
+    ],
+    "mobile": "Кейс читается как статья; числа не служат декоративными анимированными счётчиками.",
+    "publicationRule": "Кейс публикуется только после разрешения и EvidenceRecord. Никаких анонимных выдуманных историй."
+  },
+  {
+    "id": "T24",
+    "name": "Status destination - reserved",
+    "goal": "Дать проверенную точку проверки сервиса.",
+    "layout": "status_destination",
+    "sections": [
+      "Заголовок и ссылка на фактический status service.",
+      "Если встроен status - источник, scope, updatedAt и stale indicator.",
+      "Нет данных - прямое пояснение и Support.",
+      "Стандартный footer."
+    ],
+    "componentIds": [
+      "C01",
+      "C10",
+      "C25",
+      "C26",
+      "C30",
+      "C36"
+    ],
+    "states": [
+      "reserved",
+      "external_verified",
+      "feed_available",
+      "feed_stale",
+      "feed_error"
+    ],
+    "mobile": "Status и время обновления доступны обычным текстом, без обязательного графика.",
+    "publicationRule": "Не рисовать All systems operational до подключения настоящего источника."
+  }
+]

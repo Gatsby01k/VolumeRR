@@ -1,0 +1,34 @@
+[
+  {
+    "id": "igaming",
+    "title": "iGaming",
+    "summary": "Plan payment flows around player journeys, merchant scope and the jurisdictions involved.",
+    "operatingQuestions": [
+      "Merchant eligibility and jurisdictions",
+      "Collection and player withdrawals",
+      "References, events and reconciliation"
+    ],
+    "relatedFlowIds": [
+      "pay_in",
+      "payout",
+      "settlement"
+    ],
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "digital-businesses",
+    "title": "Digital businesses",
+    "summary": "Connect customer collection, outgoing funds and settlement to your digital operation.",
+    "operatingQuestions": [
+      "Business model and customer journey",
+      "Recipient scope",
+      "Local methods and reporting"
+    ],
+    "relatedFlowIds": [
+      "pay_in",
+      "payout",
+      "settlement"
+    ],
+    "publicationState": "editorial_review"
+  }
+]

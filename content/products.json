@@ -1,0 +1,128 @@
+[
+  {
+    "id": "pay_in",
+    "slug": "pay-ins",
+    "title": "Pay-ins",
+    "heroLines": [
+      "Local collection. A clearer start."
+    ],
+    "summary": "Define the customer payment journey around local methods and operating requirements.",
+    "stages": [
+      {
+        "id": "1",
+        "label": "Customer instruction",
+        "explanation": "Which customer details and payment reference are needed?",
+        "nextQuestion": "Which customer details and payment reference are needed?"
+      },
+      {
+        "id": "2",
+        "label": "Processing",
+        "explanation": "Which method, provider scope and exception paths should be agreed?",
+        "nextQuestion": "Which method, provider scope and exception paths should be agreed?"
+      },
+      {
+        "id": "3",
+        "label": "Confirmation",
+        "explanation": "Which event and record should your system treat as authoritative?",
+        "nextQuestion": "Which event and record should your system treat as authoritative?"
+      }
+    ],
+    "setupQuestions": [
+      "Which customer details and payment reference are needed?",
+      "Which method, provider scope and exception paths should be agreed?",
+      "Which event and record should your system treat as authoritative?"
+    ],
+    "relatedCountryIds": [
+      "india",
+      "peru",
+      "ghana",
+      "kenya"
+    ],
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "payout",
+    "slug": "payouts",
+    "title": "Payouts",
+    "heroLines": [
+      "Outgoing payments. A clearer path."
+    ],
+    "summary": "Plan outgoing funds around recipients, required data and a dependable record of the outcome.",
+    "stages": [
+      {
+        "id": "1",
+        "label": "Recipient scope",
+        "explanation": "Who receives funds and which account or wallet details are required?",
+        "nextQuestion": "Who receives funds and which account or wallet details are required?"
+      },
+      {
+        "id": "2",
+        "label": "Processing scope",
+        "explanation": "How should instructions, checks, retries and exceptions be handled?",
+        "nextQuestion": "How should instructions, checks, retries and exceptions be handled?"
+      },
+      {
+        "id": "3",
+        "label": "Confirmation scope",
+        "explanation": "How will the recipient outcome and reconciliation record reach your team?",
+        "nextQuestion": "How will the recipient outcome and reconciliation record reach your team?"
+      }
+    ],
+    "setupQuestions": [
+      "Who receives funds and which account or wallet details are required?",
+      "How should instructions, checks, retries and exceptions be handled?",
+      "How will the recipient outcome and reconciliation record reach your team?"
+    ],
+    "relatedCountryIds": [
+      "india",
+      "peru",
+      "ghana",
+      "kenya"
+    ],
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "settlement",
+    "slug": "settlement",
+    "title": "Settlement",
+    "heroLines": [
+      "Close the loop. Keep the record."
+    ],
+    "summary": "Bring currency, timing, destination and reconciliation into the same operating discussion.",
+    "stages": [
+      {
+        "id": "1",
+        "label": "Balance and scope",
+        "explanation": "What balance is being settled, by whom and under which agreement?",
+        "nextQuestion": "What balance is being settled, by whom and under which agreement?"
+      },
+      {
+        "id": "2",
+        "label": "Destination and timing",
+        "explanation": "Which currency, destination and scheduling conditions should be assessed?",
+        "nextQuestion": "Which currency, destination and scheduling conditions should be assessed?"
+      },
+      {
+        "id": "3",
+        "label": "Records and exceptions",
+        "explanation": "How should fees, FX, references and differences appear in reporting?",
+        "nextQuestion": "How should fees, FX, references and differences appear in reporting?"
+      }
+    ],
+    "setupQuestions": [
+      "What balance is being settled, by whom and under which agreement?",
+      "Which currency, destination and scheduling conditions should be assessed?",
+      "How should fees, FX, references and differences appear in reporting?"
+    ],
+    "relatedCountryIds": [
+      "india",
+      "peru",
+      "ghana",
+      "kenya"
+    ],
+    "evidenceIds": [],
+    "publicationState": "editorial_review"
+  }
+]

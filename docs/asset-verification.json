@@ -1,0 +1,81 @@
+{
+  "checkedAt": "2026-11-06T11:10:38.928Z",
+  "origin": "http://127.0.0.1:3001",
+  "methodology": "Production HTML script and CSS resources fetched locally and gzip-compressed. Modern JS excludes the nomodule legacy polyfill. This is an asset-weight audit, not a field Core Web Vitals measurement.",
+  "allJsGzipBytes": 212768,
+  "modernJsGzipBytes": 173141,
+  "cssGzipBytes": 14937,
+  "heroPosterBytes": 28302,
+  "budgets": {
+    "initialJsGzipBytes": 133120,
+    "cssGzipBytes": 40960
+  },
+  "assets": [
+    {
+      "path": "/_next/static/chunks/09cok979_2_j7.css",
+      "legacyOnly": false,
+      "bytes": 73676,
+      "gzip": 14937
+    },
+    {
+      "path": "/_next/static/chunks/3v_59l1qr_8dp.js",
+      "legacyOnly": false,
+      "bytes": 24307,
+      "gzip": 7438
+    },
+    {
+      "path": "/_next/static/chunks/24pmacv9f6q9n.js",
+      "legacyOnly": false,
+      "bytes": 179507,
+      "gzip": 48417
+    },
+    {
+      "path": "/_next/static/chunks/23e6jep2anmtk.js",
+      "legacyOnly": false,
+      "bytes": 229288,
+      "gzip": 71752
+    },
+    {
+      "path": "/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+      "legacyOnly": false,
+      "bytes": 9974,
+      "gzip": 3905
+    },
+    {
+      "path": "/_next/static/chunks/37y4iwt2ds823.js",
+      "legacyOnly": false,
+      "bytes": 19366,
+      "gzip": 5048
+    },
+    {
+      "path": "/_next/static/chunks/0dxhn6_oocsui.js",
+      "legacyOnly": false,
+      "bytes": 35470,
+      "gzip": 10667
+    },
+    {
+      "path": "/_next/static/chunks/2v6wl_s7gts8m.js",
+      "legacyOnly": false,
+      "bytes": 21813,
+      "gzip": 6671
+    },
+    {
+      "path": "/_next/static/chunks/2n9pg1wq_rcrn.js",
+      "legacyOnly": false,
+      "bytes": 89282,
+      "gzip": 18853
+    },
+    {
+      "path": "/_next/static/chunks/1y3yq_dd62emc.js",
+      "legacyOnly": false,
+      "bytes": 612,
+      "gzip": 390
+    },
+    {
+      "path": "/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "legacyOnly": true,
+      "bytes": 112594,
+      "gzip": 39627
+    }
+  ]
+}

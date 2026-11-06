@@ -1,0 +1,270 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://volumerail.example/contracts/enquiry.schema.json",
+  "title": "VolumeRail website enquiry - design contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "requestIdempotencyKey",
+    "purpose",
+    "company",
+    "email",
+    "marketIds",
+    "flowIds",
+    "marketExploring",
+    "privacyAcknowledged",
+    "privacyNoticeVersion",
+    "marketingConsent",
+    "otherMarkets",
+    "flowExploring",
+    "sourceRoute",
+    "locale"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "requestIdempotencyKey": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "purpose": {
+      "enum": [
+        "merchant",
+        "partner",
+        "technical",
+        "support"
+      ]
+    },
+    "company": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120,
+      "pattern": "\\S"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "maxLength": 254
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "maxLength": 2048,
+      "pattern": "^https?://"
+    },
+    "marketIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 10,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]{1,63}$"
+      }
+    },
+    "otherMarkets": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 3,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 80,
+        "pattern": "\\S"
+      }
+    },
+    "marketExploring": {
+      "type": "boolean"
+    },
+    "flowIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 3,
+      "items": {
+        "enum": [
+          "pay_in",
+          "payout",
+          "settlement"
+        ]
+      }
+    },
+    "flowExploring": {
+      "type": "boolean",
+      "default": false
+    },
+    "industryId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,63}$"
+    },
+    "partnerType": {
+      "enum": [
+        "payment_provider",
+        "commercial",
+        "technical",
+        "other"
+      ]
+    },
+    "expectedMonthlyAmount": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000000000000000
+    },
+    "expectedMonthlyCurrency": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$"
+    },
+    "settlementPreference": {
+      "enum": [
+        "not_sure",
+        "bank",
+        "stablecoin",
+        "other"
+      ]
+    },
+    "settlementAsset": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]{3,12}$"
+    },
+    "settlementNetwork": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "requirements": {
+      "type": "string",
+      "maxLength": 3000
+    },
+    "supportReference": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "privacyAcknowledged": {
+      "const": true
+    },
+    "privacyNoticeVersion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "marketingConsent": {
+      "type": "boolean",
+      "default": false
+    },
+    "sourceRoute": {
+      "type": "string",
+      "maxLength": 200,
+      "pattern": "^/[a-zA-Z0-9/_-]*$"
+    },
+    "locale": {
+      "const": "en"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "purpose": {
+            "const": "merchant"
+          }
+        },
+        "required": [
+          "purpose"
+        ]
+      },
+      "then": {
+        "anyOf": [
+          {
+            "properties": {
+              "marketIds": {
+                "minItems": 1
+              }
+            }
+          },
+          {
+            "required": [
+              "otherMarkets"
+            ],
+            "properties": {
+              "otherMarkets": {
+                "minItems": 1
+              }
+            }
+          },
+          {
+            "properties": {
+              "marketExploring": {
+                "const": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "anyOf": [
+        {
+          "properties": {
+            "flowIds": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "required": [
+            "flowExploring"
+          ],
+          "properties": {
+            "flowExploring": {
+              "const": true
+            }
+          }
+        },
+        {
+          "properties": {
+            "purpose": {
+              "enum": [
+                "partner",
+                "technical",
+                "support"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "if": {
+        "required": [
+          "expectedMonthlyAmount"
+        ]
+      },
+      "then": {
+        "required": [
+          "expectedMonthlyCurrency"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "purpose": {
+            "const": "partner"
+          }
+        },
+        "required": [
+          "purpose"
+        ]
+      },
+      "then": {
+        "required": [
+          "partnerType"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+[
+  {
+    "id": "C01",
+    "name": "Header",
+    "dataContract": "NavigationConfig",
+    "states": [
+      "default",
+      "scrolled",
+      "active_route"
+    ],
+    "accessibility": "nav landmark; CTA and optional verified login"
+  },
+  {
+    "id": "C02",
+    "name": "MegaMenu",
+    "dataContract": "NavigationGroup",
+    "states": [
+      "closed",
+      "open",
+      "focus_inside"
+    ],
+    "accessibility": "button trigger; Escape; focus return"
+  },
+  {
+    "id": "C03",
+    "name": "MobileNavigation",
+    "dataContract": "NavigationConfig",
+    "states": [
+      "closed",
+      "open"
+    ],
+    "accessibility": "dialog semantics; focus trap; inert background"
+  },
+  {
+    "id": "C04",
+    "name": "HeroAperture",
+    "dataContract": "HeroContent",
+    "states": [
+      "initial",
+      "revealed",
+      "static",
+      "reduced"
+    ],
+    "accessibility": "decorative material; real HTML text and controls"
+  },
+  {
+    "id": "C05",
+    "name": "EditorialHeading",
+    "dataContract": "HeadingContent",
+    "states": [
+      "dark",
+      "paper",
+      "compact"
+    ],
+    "accessibility": "one h1 per page; stable wrapping"
+  },
+  {
+    "id": "C06",
+    "name": "ProductRail",
+    "dataContract": "ProductRecord[]",
+    "states": [
+      "default",
+      "selected"
+    ],
+    "accessibility": "linked product rows; selection separate from navigation"
+  },
+  {
+    "id": "C07",
+    "name": "FlowAnatomy",
+    "dataContract": "IllustrativeFlow",
+    "states": [
+      "step_1",
+      "step_2",
+      "pending",
+      "confirmed_example"
+    ],
+    "accessibility": "label illustrative; keyboard step controls"
+  },
+  {
+    "id": "C08",
+    "name": "MarketFilters",
+    "dataContract": "MarketFilterState",
+    "states": [
+      "initial",
+      "active",
+      "reset",
+      "empty"
+    ],
+    "accessibility": "labelled search; toggle buttons; URL sync"
+  },
+  {
+    "id": "C09",
+    "name": "CountryRow",
+    "dataContract": "CountryRecord",
+    "states": [
+      "default",
+      "selected",
+      "focused"
+    ],
+    "accessibility": "country link and compare checkbox are siblings"
+  },
+  {
+    "id": "C10",
+    "name": "AvailabilityLabel",
+    "dataContract": "AvailabilityRecord",
+    "states": [
+      "unverified",
+      "conditional",
+      "available",
+      "unavailable",
+      "stale"
+    ],
+    "accessibility": "text status plus optional icon; no color-only meaning"
+  },
+  {
+    "id": "C11",
+    "name": "MethodContext",
+    "dataContract": "MethodRecord",
+    "states": [
+      "context_only",
+      "verified",
+      "stale"
+    ],
+    "accessibility": "source and access state separated"
+  },
+  {
+    "id": "C12",
+    "name": "CountrySummary",
+    "dataContract": "CountryRecord",
+    "states": [
+      "focus",
+      "partial",
+      "verified"
+    ],
+    "accessibility": "label/value definitions with source date"
+  },
+  {
+    "id": "C13",
+    "name": "CompareMatrix",
+    "dataContract": "ComparisonModel",
+    "states": [
+      "empty",
+      "one",
+      "two",
+      "three",
+      "invalid"
+    ],
+    "accessibility": "semantic table desktop; labelled criterion groups mobile"
+  },
+  {
+    "id": "C14",
+    "name": "BriefRail",
+    "dataContract": "BriefContext",
+    "states": [
+      "empty",
+      "expanded",
+      "collapsed",
+      "updated"
+    ],
+    "accessibility": "nonmodal; safe area; no PII"
+  },
+  {
+    "id": "C15",
+    "name": "BriefPicker",
+    "dataContract": "BriefContext",
+    "states": [
+      "selected",
+      "removed",
+      "other",
+      "limit"
+    ],
+    "accessibility": "accessible checkboxes or buttons; explicit change messages"
+  },
+  {
+    "id": "C16",
+    "name": "LeadForm",
+    "dataContract": "EnquiryDraft",
+    "states": [
+      "blank",
+      "prefilled",
+      "invalid",
+      "submitting",
+      "uncertain",
+      "error"
+    ],
+    "accessibility": "single form; inline errors; durable-ack semantics"
+  },
+  {
+    "id": "C17",
+    "name": "ReviewSummary",
+    "dataContract": "EnquiryDraft",
+    "states": [
+      "ready",
+      "edit_section"
+    ],
+    "accessibility": "definition list; explicit edit links"
+  },
+  {
+    "id": "C18",
+    "name": "Receipt",
+    "dataContract": "EnquiryReceipt",
+    "states": [
+      "accepted",
+      "missing",
+      "duplicate"
+    ],
+    "accessibility": "status; no PII in public route"
+  },
+  {
+    "id": "C19",
+    "name": "TrustEvidence",
+    "dataContract": "EvidenceRecord[]",
+    "states": [
+      "none",
+      "valid",
+      "expired",
+      "request"
+    ],
+    "accessibility": "claim source, scope and reviewedAt"
+  },
+  {
+    "id": "C20",
+    "name": "OperatingSplit",
+    "dataContract": "ResponsibilityRecord[]",
+    "states": [
+      "default",
+      "conditional"
+    ],
+    "accessibility": "who defines / who confirms / who executes"
+  },
+  {
+    "id": "C21",
+    "name": "DocNavigation",
+    "dataContract": "DocTree",
+    "states": [
+      "active",
+      "collapsed",
+      "search_empty"
+    ],
+    "accessibility": "nav; in-page anchors; mobile contents"
+  },
+  {
+    "id": "C22",
+    "name": "CodeSpecimen",
+    "dataContract": "CodeExample",
+    "states": [
+      "conceptual",
+      "contract",
+      "copy_success",
+      "copy_error"
+    ],
+    "accessibility": "caption; text selection; no invented credentials"
+  },
+  {
+    "id": "C23",
+    "name": "ArticleBody",
+    "dataContract": "ArticleRecord",
+    "states": [
+      "published",
+      "stale",
+      "archived"
+    ],
+    "accessibility": "limited measure; semantic headings"
+  },
+  {
+    "id": "C24",
+    "name": "FAQ",
+    "dataContract": "FaqRecord[]",
+    "states": [
+      "closed",
+      "open"
+    ],
+    "accessibility": "native details or button with aria-expanded"
+  },
+  {
+    "id": "C25",
+    "name": "ContextCTA",
+    "dataContract": "CtaContext",
+    "states": [
+      "default",
+      "prefilled"
+    ],
+    "accessibility": "whitelisted non-PII context"
+  },
+  {
+    "id": "C26",
+    "name": "Footer",
+    "dataContract": "SiteIdentity",
+    "states": [
+      "default",
+      "motion_off"
+    ],
+    "accessibility": "verified contacts; legal links; motion preference"
+  },
+  {
+    "id": "C27",
+    "name": "Dialog",
+    "dataContract": "DialogContent",
+    "states": [
+      "closed",
+      "open"
+    ],
+    "accessibility": "focus trap; Escape; restore focus"
+  },
+  {
+    "id": "C28",
+    "name": "Toast",
+    "dataContract": "StatusMessage",
+    "states": [
+      "success",
+      "error",
+      "info"
+    ],
+    "accessibility": "polite live region; does not steal focus"
+  },
+  {
+    "id": "C29",
+    "name": "ErrorSummary",
+    "dataContract": "FieldError[]",
+    "states": [
+      "visible",
+      "linked_to_field"
+    ],
+    "accessibility": "alert summary; field anchors"
+  },
+  {
+    "id": "C30",
+    "name": "EmptyState",
+    "dataContract": "EmptyStateContent",
+    "states": [
+      "no_results",
+      "no_data",
+      "invalid"
+    ],
+    "accessibility": "explanation, recovery action and retained context"
+  },
+  {
+    "id": "C31",
+    "name": "PartnerSelector",
+    "dataContract": "PartnerType[]",
+    "states": [
+      "provider",
+      "commercial",
+      "technical",
+      "other"
+    ],
+    "accessibility": "selection populates enquiry context"
+  },
+  {
+    "id": "C32",
+    "name": "LocaleControl",
+    "dataContract": "LocaleConfig",
+    "states": [
+      "en",
+      "available_locale"
+    ],
+    "accessibility": "no unsupported locale link; no forced IP switch"
+  },
+  {
+    "id": "C33",
+    "name": "Breadcrumbs",
+    "dataContract": "BreadcrumbItem[]",
+    "states": [
+      "default"
+    ],
+    "accessibility": "nav aria-label; current item not a link"
+  },
+  {
+    "id": "C34",
+    "name": "ProofCase",
+    "dataContract": "ApprovedCase",
+    "states": [
+      "approved",
+      "permission_withdrawn"
+    ],
+    "accessibility": "source-backed outcomes only"
+  },
+  {
+    "id": "C35",
+    "name": "PriceDimensions",
+    "dataContract": "Pricebook",
+    "states": [
+      "scoped",
+      "published"
+    ],
+    "accessibility": "currency, unit, scope and effective date required"
+  },
+  {
+    "id": "C36",
+    "name": "StatusLink",
+    "dataContract": "VerifiedDestination",
+    "states": [
+      "available",
+      "unavailable",
+      "stale"
+    ],
+    "accessibility": "no dummy operational status"
+  },
+  {
+    "id": "C37",
+    "name": "CookiePreferences",
+    "dataContract": "CookiePolicy",
+    "states": [
+      "essential_only",
+      "optional_off",
+      "optional_on"
+    ],
+    "accessibility": "optional scripts wait for consent where applicable"
+  },
+  {
+    "id": "C38",
+    "name": "SkipLink",
+    "dataContract": "none",
+    "states": [
+      "unfocused",
+      "focused"
+    ],
+    "accessibility": "first keyboard target; visible on focus"
+  },
+  {
+    "id": "C39",
+    "name": "RailCompanion",
+    "dataContract": "CompanionState",
+    "states": [
+      "ready",
+      "explore",
+      "brief_added",
+      "attention",
+      "enquiry_received",
+      "reduced_static",
+      "hidden"
+    ],
+    "accessibility": "Decorative render; separate labelled hide control; text feedback remains independent; no focus interception."
+  }
+]

@@ -1,0 +1,716 @@
+{
+  "purpose": "Design-contract validation only; examples do not create enquiries.",
+  "cases": [
+    {
+      "name": "One-character company and contact email",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Exploring merchant",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [],
+        "marketExploring": true,
+        "flowIds": [],
+        "flowExploring": true,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Other market",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [
+          "Nigeria"
+        ],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Missing market choice",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "{'schemaVersion': '1.0', 'requestIdempotencyKey': '11111111-1111-4111-8111-111111111111', 'purpose': 'merchant', 'company': 'X', 'email': 'founder@example.com', 'marketIds': [], 'otherMarkets': [], 'marketExploring': False, 'flowIds': ['pay_in'], 'flowExploring': False, 'privacyAcknowledged': True, 'privacyNoticeVersion': 'example-only-v1', 'marketingConsent': False, 'sourceRoute': '/markets/india', 'locale': 'en'} is not valid under any of the given schemas"
+      ]
+    },
+    {
+      "name": "Missing product choice",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "{'schemaVersion': '1.0', 'requestIdempotencyKey': '11111111-1111-4111-8111-111111111111', 'purpose': 'merchant', 'company': 'X', 'email': 'founder@example.com', 'marketIds': ['india'], 'otherMarkets': [], 'marketExploring': False, 'flowIds': [], 'flowExploring': False, 'privacyAcknowledged': True, 'privacyNoticeVersion': 'example-only-v1', 'marketingConsent': False, 'sourceRoute': '/markets/india', 'locale': 'en'} is not valid under any of the given schemas"
+      ]
+    },
+    {
+      "name": "Support needs no market/product",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "support",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "supportReference": "EXAMPLE-ONLY"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Partner needs type",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "partner",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'partnerType' is a required property"
+      ]
+    },
+    {
+      "name": "Partner has type",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "partner",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "partnerType": "technical"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Technical no market/product",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "technical",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "No privacy acknowledgement",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": false,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "True was expected"
+      ]
+    },
+    {
+      "name": "No marketing consent required",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Invalid email",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "invalid",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'invalid' is not a 'email'"
+      ]
+    },
+    {
+      "name": "Whitespace company",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "   ",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'   ' does not match '\\\\S'"
+      ]
+    },
+    {
+      "name": "Unknown market",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "neverland"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "Unknown market ID"
+      ]
+    },
+    {
+      "name": "Unknown route",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/unknown-page",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "Unknown source route"
+      ]
+    },
+    {
+      "name": "Duplicate markets",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india",
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "['india', 'india'] has non-unique elements"
+      ]
+    },
+    {
+      "name": "Max known markets guarded",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india",
+          "peru",
+          "ghana",
+          "kenya",
+          "india",
+          "peru",
+          "ghana",
+          "kenya",
+          "india",
+          "peru",
+          "ghana",
+          "kenya"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "['india', 'peru', 'ghana', 'kenya', 'india', 'peru', 'ghana', 'kenya', 'india', 'peru', 'ghana', 'kenya'] has non-unique elements",
+        "['india', 'peru', 'ghana', 'kenya', 'india', 'peru', 'ghana', 'kenya', 'india', 'peru', 'ghana', 'kenya'] is too long"
+      ]
+    },
+    {
+      "name": "Volume requires currency",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "expectedMonthlyAmount": 100000
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'expectedMonthlyCurrency' is a required property"
+      ]
+    },
+    {
+      "name": "Zero volume allowed",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "expectedMonthlyAmount": 0,
+        "expectedMonthlyCurrency": "USD"
+      },
+      "expectedValid": true,
+      "actualValid": true,
+      "errors": []
+    },
+    {
+      "name": "Negative volume",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "expectedMonthlyAmount": -1,
+        "expectedMonthlyCurrency": "USD"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "-1 is less than the minimum of 0"
+      ]
+    },
+    {
+      "name": "Only http/https websites",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "website": "javascript:alert(1)"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'javascript:alert(1)' does not match '^https?://'"
+      ]
+    },
+    {
+      "name": "Personal bank field rejected",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "bankAccount": "example"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "Additional properties are not allowed ('bankAccount' was unexpected)"
+      ]
+    },
+    {
+      "name": "Other market whitespace rejected",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [
+          "  "
+        ],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'  ' does not match '\\\\S'"
+      ]
+    },
+    {
+      "name": "PII query string rejected",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/contact?email=a",
+        "locale": "en"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'/contact?email=a' does not match '^/[a-zA-Z0-9/_-]*$'",
+        "Unknown source route"
+      ]
+    },
+    {
+      "name": "Too-long requirements rejected",
+      "payload": {
+        "schemaVersion": "1.0",
+        "requestIdempotencyKey": "11111111-1111-4111-8111-111111111111",
+        "purpose": "merchant",
+        "company": "X",
+        "email": "founder@example.com",
+        "marketIds": [
+          "india"
+        ],
+        "otherMarkets": [],
+        "marketExploring": false,
+        "flowIds": [
+          "pay_in"
+        ],
+        "flowExploring": false,
+        "privacyAcknowledged": true,
+        "privacyNoticeVersion": "example-only-v1",
+        "marketingConsent": false,
+        "sourceRoute": "/markets/india",
+        "locale": "en",
+        "requirements": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "expectedValid": false,
+      "actualValid": false,
+      "errors": [
+        "'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' is too long"
+      ]
+    }
+  ]
+}

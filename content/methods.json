@@ -1,0 +1,303 @@
+[
+  {
+    "id": "upi",
+    "name": "UPI",
+    "category": "instant_bank",
+    "countryIds": [
+      "india"
+    ],
+    "contextSourceUrls": [
+      "https://www.npci.org.in/product/upi"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "upi"
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "upi"
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "upi"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "imps",
+    "name": "IMPS",
+    "category": "bank_transfer",
+    "countryIds": [
+      "india"
+    ],
+    "contextSourceUrls": [
+      "https://www.npci.org.in/product/imps"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "imps"
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "imps"
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "imps"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "neft",
+    "name": "NEFT",
+    "category": "bank_transfer",
+    "countryIds": [
+      "india"
+    ],
+    "contextSourceUrls": [
+      "https://www.rbi.org.in/commonman/english/scripts/FAQs.aspx?Id=274"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "neft"
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "neft"
+      },
+      {
+        "state": "unverified",
+        "countryId": "india",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "neft"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "yape",
+    "name": "Yape",
+    "category": "wallet",
+    "countryIds": [
+      "peru"
+    ],
+    "contextSourceUrls": [
+      "https://www.yape.com.pe/productos/yape-empresa"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "yape"
+      },
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "yape"
+      },
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "yape"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "plin",
+    "name": "Plin",
+    "category": "instant_bank",
+    "countryIds": [
+      "peru"
+    ],
+    "contextSourceUrls": [
+      "https://plin.pe/"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "plin"
+      },
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "plin"
+      },
+      {
+        "state": "unverified",
+        "countryId": "peru",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "plin"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "ghana-mobile-money",
+    "name": "Mobile money",
+    "category": "mobile_money",
+    "countryIds": [
+      "ghana"
+    ],
+    "contextSourceUrls": [
+      "https://www.bog.gov.gh/wp-content/uploads/2026/02/NATIONAL-PAYMENT-SYSTEMS-STRATEGY-2025-2029.pdf"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "ghana",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "ghana-mobile-money"
+      },
+      {
+        "state": "unverified",
+        "countryId": "ghana",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "ghana-mobile-money"
+      },
+      {
+        "state": "unverified",
+        "countryId": "ghana",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "ghana-mobile-money"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  },
+  {
+    "id": "mpesa",
+    "name": "M-PESA",
+    "category": "mobile_money",
+    "countryIds": [
+      "kenya"
+    ],
+    "contextSourceUrls": [
+      "https://developer.safaricom.co.ke/"
+    ],
+    "availability": [
+      {
+        "state": "unverified",
+        "countryId": "kenya",
+        "flowId": "pay_in",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "mpesa"
+      },
+      {
+        "state": "unverified",
+        "countryId": "kenya",
+        "flowId": "payout",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "mpesa"
+      },
+      {
+        "state": "unverified",
+        "countryId": "kenya",
+        "flowId": "settlement",
+        "merchantConditions": [],
+        "reviewedAt": null,
+        "evidenceIds": [],
+        "methodId": "mpesa"
+      }
+    ],
+    "contextOnly": true,
+    "reviewedAt": null,
+    "publicationState": "editorial_review"
+  }
+]

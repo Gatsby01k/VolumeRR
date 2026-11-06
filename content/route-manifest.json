@@ -1,0 +1,1011 @@
+[
+  {
+    "id": "home",
+    "path": "/",
+    "template": "T01",
+    "title": "Home",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Move value. Open markets.",
+    "primary_cta": "Explore markets",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Home | VolumeRail",
+      "description": "Pay-ins, payouts and settlement. Built around local markets.",
+      "canonicalPath": "/",
+      "ogAssetId": "og-home"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "payments",
+    "path": "/payments",
+    "template": "T02",
+    "title": "Payments",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "One operating flow. Three connected parts.",
+    "primary_cta": "Discuss your flow",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Payments | VolumeRail",
+      "description": "Scope local collection, outgoing payments and settlement as connected parts of your operation.",
+      "canonicalPath": "/payments",
+      "ogAssetId": "og-payments"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "pay_ins",
+    "path": "/payments/pay-ins",
+    "template": "T03",
+    "title": "Pay-ins",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Local collection. A clearer start.",
+    "primary_cta": "Add pay-ins to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Pay-ins | VolumeRail",
+      "description": "Define the customer payment journey around local methods and operating requirements.",
+      "canonicalPath": "/payments/pay-ins",
+      "ogAssetId": "og-pay_ins"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "payouts",
+    "path": "/payments/payouts",
+    "template": "T03",
+    "title": "Payouts",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Outgoing payments. A clearer path.",
+    "primary_cta": "Add payouts to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Payouts | VolumeRail",
+      "description": "Plan outgoing funds around recipients, required data and a dependable record of the outcome.",
+      "canonicalPath": "/payments/payouts",
+      "ogAssetId": "og-payouts"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "settlement",
+    "path": "/payments/settlement",
+    "template": "T03",
+    "title": "Settlement",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Close the loop. Keep the record.",
+    "primary_cta": "Add settlement to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Settlement | VolumeRail",
+      "description": "Bring currency, timing, destination and reconciliation into the same operating discussion.",
+      "canonicalPath": "/payments/settlement",
+      "ogAssetId": "og-settlement"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "methods",
+    "path": "/payments/methods",
+    "template": "T04",
+    "title": "Local methods",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "The right method starts with the market.",
+    "primary_cta": "Explore a market",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Local methods | VolumeRail",
+      "description": "Explore the local method landscape and separate market context from confirmed availability.",
+      "canonicalPath": "/payments/methods",
+      "ogAssetId": "og-methods"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "markets",
+    "path": "/markets",
+    "template": "T05",
+    "title": "Market focus",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Start with the local detail.",
+    "primary_cta": "Review your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Market focus | VolumeRail",
+      "description": "Explore market context, compare setup questions and carry your choices into a payment brief.",
+      "canonicalPath": "/markets",
+      "ogAssetId": "og-markets"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "asia",
+    "path": "/markets/asia",
+    "template": "T05",
+    "title": "Asia",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Asia. Start with the local detail.",
+    "primary_cta": "Explore India",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Asia | VolumeRail",
+      "description": "Start with India and the INR flow. Each market needs its own method and operating scope.",
+      "canonicalPath": "/markets/asia",
+      "ogAssetId": "og-asia"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "latam",
+    "path": "/markets/latam",
+    "template": "T05",
+    "title": "Latin America",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Latin America. Start with the local detail.",
+    "primary_cta": "Explore Peru",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Latin America | VolumeRail",
+      "description": "Start with Peru and the PEN flow. Local customer behaviour and method scope shape the setup.",
+      "canonicalPath": "/markets/latam",
+      "ogAssetId": "og-latam"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "africa",
+    "path": "/markets/africa",
+    "template": "T05",
+    "title": "Africa",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Africa. Start with the local detail.",
+    "primary_cta": "Explore a market",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Africa | VolumeRail",
+      "description": "Explore Ghana and Kenya through their own currencies, mobile money context and operating requirements.",
+      "canonicalPath": "/markets/africa",
+      "ogAssetId": "og-africa"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "india",
+    "path": "/markets/india",
+    "template": "T06",
+    "title": "India",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "India. Build around the local flow.",
+    "primary_cta": "Add India to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "India | VolumeRail",
+      "description": "Start with the collection or payout scenario, local fields and INR reporting. Confirm the method, merchant scope and operating responsibilities before launch.",
+      "canonicalPath": "/markets/india",
+      "ogAssetId": "og-india"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "peru",
+    "path": "/markets/peru",
+    "template": "T06",
+    "title": "Peru",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Peru. Build around the local flow.",
+    "primary_cta": "Add Peru to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Peru | VolumeRail",
+      "description": "Plan the PEN flow around local customer and recipient behaviour. Confirm how each proposed method connects to your operating model.",
+      "canonicalPath": "/markets/peru",
+      "ogAssetId": "og-peru"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "ghana",
+    "path": "/markets/ghana",
+    "template": "T06",
+    "title": "Ghana",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Ghana. Build around the local flow.",
+    "primary_cta": "Add Ghana to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Ghana | VolumeRail",
+      "description": "Define the GHS collection or payout requirement and the mobile money context. Agree the provider scope, references and confirmation process.",
+      "canonicalPath": "/markets/ghana",
+      "ogAssetId": "og-ghana"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "kenya",
+    "path": "/markets/kenya",
+    "template": "T06",
+    "title": "Kenya",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Kenya. Build around the local flow.",
+    "primary_cta": "Add Kenya to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Kenya | VolumeRail",
+      "description": "Define the KES flow and the role of mobile money or bank transfers. Confirm recipient data, event meanings and reconciliation requirements.",
+      "canonicalPath": "/markets/kenya",
+      "ogAssetId": "og-kenya"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "compare",
+    "path": "/markets/compare",
+    "template": "T07",
+    "title": "Compare market setup",
+    "readiness": "core",
+    "indexing": "noindex",
+    "h1": "Compare the setup. Keep the context.",
+    "primary_cta": "Add selection to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Compare market setup | VolumeRail",
+      "description": "Compare up to three countries by operating context. Unknown availability stays visible.",
+      "canonicalPath": "/markets/compare",
+      "ogAssetId": "og-compare"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "industries",
+    "path": "/industries",
+    "template": "T08",
+    "title": "Industries",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Built around the way your business operates.",
+    "primary_cta": "Discuss your business model",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Industries | VolumeRail",
+      "description": "Start with your business model, the customer journey and the countries involved.",
+      "canonicalPath": "/industries",
+      "ogAssetId": "og-industries"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "igaming",
+    "path": "/industries/igaming",
+    "template": "T09",
+    "title": "iGaming",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "A payment flow built around the player journey.",
+    "primary_cta": "Discuss your operating model",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "iGaming | VolumeRail",
+      "description": "Plan payment flows around player journeys, merchant scope and the jurisdictions involved.",
+      "canonicalPath": "/industries/igaming",
+      "ogAssetId": "og-igaming"
+    },
+    "ownerGates": [
+      "Merchant eligibility policy and approved industry positioning"
+    ]
+  },
+  {
+    "id": "digital",
+    "path": "/industries/digital-businesses",
+    "template": "T09",
+    "title": "Digital businesses",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Local payment context for digital businesses.",
+    "primary_cta": "Discuss your operating model",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Digital businesses | VolumeRail",
+      "description": "Connect customer collection, outgoing funds and settlement to your digital operation.",
+      "canonicalPath": "/industries/digital-businesses",
+      "ogAssetId": "og-digital"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "developers",
+    "path": "/developers",
+    "template": "T10",
+    "title": "Developers",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Make the flow understandable.",
+    "primary_cta": "Discuss the technical scope",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Developers | VolumeRail",
+      "description": "Plan the integration around events, records and real operating requirements.",
+      "canonicalPath": "/developers",
+      "ogAssetId": "og-developers"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "guide",
+    "path": "/developers/integration-guide",
+    "template": "T11",
+    "title": "Integration guide",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Start with the integration scope.",
+    "primary_cta": "Prepare the technical brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Integration guide | VolumeRail",
+      "description": "A planning guide for the integration conversation. The final API and environment contract is agreed separately.",
+      "canonicalPath": "/developers/integration-guide",
+      "ogAssetId": "og-guide"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "lifecycle",
+    "path": "/developers/payment-lifecycle",
+    "template": "T11",
+    "title": "Payment lifecycle",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Keep the instruction connected to the outcome.",
+    "primary_cta": "Discuss the state model",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Payment lifecycle | VolumeRail",
+      "description": "A conceptual model for discussing instructions, processing, confirmation and exceptions.",
+      "canonicalPath": "/developers/payment-lifecycle",
+      "ogAssetId": "og-lifecycle"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "webhooks",
+    "path": "/developers/webhooks",
+    "template": "T11",
+    "title": "Events and webhooks",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Make a change of state explicit.",
+    "primary_cta": "Request current integration materials",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Events and webhooks | VolumeRail",
+      "description": "Plan event delivery and recovery using the actual event contract agreed for your integration.",
+      "canonicalPath": "/developers/webhooks",
+      "ogAssetId": "og-webhooks"
+    },
+    "ownerGates": [
+      "Replace planning guidance with versioned signed integration details before labelling API documentation"
+    ]
+  },
+  {
+    "id": "reconciliation",
+    "path": "/developers/reconciliation",
+    "template": "T11",
+    "title": "Reconciliation",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Connect the records before closing the period.",
+    "primary_cta": "Discuss reporting requirements",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Reconciliation | VolumeRail",
+      "description": "Bring payment references and financial records into a shared operating view.",
+      "canonicalPath": "/developers/reconciliation",
+      "ogAssetId": "og-reconciliation"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "partners",
+    "path": "/partners",
+    "template": "T12",
+    "title": "Partners",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Better connected. Clearly scoped.",
+    "primary_cta": "Start a partner enquiry",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Partners | VolumeRail",
+      "description": "Bring a clear market, capability or operating contribution to the conversation.",
+      "canonicalPath": "/partners",
+      "ogAssetId": "og-partners"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "company",
+    "path": "/company",
+    "template": "T13",
+    "title": "Company",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Built around the flow.",
+    "primary_cta": "Discuss your flow",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Company | VolumeRail",
+      "description": "VolumeRail is building its payment proposition around local market detail and a clear operating flow.",
+      "canonicalPath": "/company",
+      "ogAssetId": "og-company"
+    },
+    "ownerGates": [
+      "Approve legal entity, operating role, company facts and public contacts"
+    ]
+  },
+  {
+    "id": "trust",
+    "path": "/trust",
+    "template": "T14",
+    "title": "Operating trust",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Clarity before the first flow.",
+    "primary_cta": "Request due-diligence information",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Operating trust | VolumeRail",
+      "description": "Understand the responsibilities, evidence and operating questions behind the proposed setup.",
+      "canonicalPath": "/trust",
+      "ogAssetId": "og-trust"
+    },
+    "ownerGates": [
+      "Entity model, responsibility matrix and evidence records"
+    ]
+  },
+  {
+    "id": "resources",
+    "path": "/resources",
+    "template": "T15",
+    "title": "Resources",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Useful detail for the next market.",
+    "primary_cta": "Explore a guide",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Resources | VolumeRail",
+      "description": "Practical reading for local markets, payment flows and implementation planning.",
+      "canonicalPath": "/resources",
+      "ogAssetId": "og-resources"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "guide_methods",
+    "path": "/resources/local-payment-methods",
+    "template": "T16",
+    "title": "Local payment methods",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "A local method is more than a logo.",
+    "primary_cta": "Build your market brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Local payment methods | VolumeRail",
+      "description": "A familiar local method name is a starting point for a discussion, not a complete operating setup.",
+      "canonicalPath": "/resources/local-payment-methods",
+      "ogAssetId": "og-guide_methods"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "guide_flows",
+    "path": "/resources/pay-ins-vs-payouts",
+    "template": "T16",
+    "title": "Pay-ins and payouts",
+    "readiness": "core",
+    "indexing": "index",
+    "h1": "Two directions. Different operating questions.",
+    "primary_cta": "Choose your flow",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Pay-ins and payouts | VolumeRail",
+      "description": "The direction of funds changes the data, user journey and operating questions.",
+      "canonicalPath": "/resources/pay-ins-vs-payouts",
+      "ogAssetId": "og-guide_flows"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "guide_settlement",
+    "path": "/resources/settlement-readiness",
+    "template": "T16",
+    "title": "Settlement readiness",
+    "readiness": "review",
+    "indexing": "index",
+    "h1": "Define completion before the first settlement.",
+    "primary_cta": "Prepare the settlement scope",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Settlement readiness | VolumeRail",
+      "description": "Prepare the questions that connect an operating balance to its destination and record.",
+      "canonicalPath": "/resources/settlement-readiness",
+      "ogAssetId": "og-guide_settlement"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "contact",
+    "path": "/contact",
+    "template": "T17",
+    "title": "Discuss your flow",
+    "readiness": "requires_connection",
+    "indexing": "noindex",
+    "h1": "Let’s map your next move.",
+    "primary_cta": "Send enquiry",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [
+      "enquiry_handler",
+      "privacy_notice"
+    ],
+    "meta": {
+      "title": "Discuss your flow | VolumeRail",
+      "description": "A few details to help us understand your goals and discuss the right operating scope.",
+      "canonicalPath": "/contact",
+      "ogAssetId": "og-contact"
+    },
+    "ownerGates": [
+      "Durable enquiry handler, owner, privacy notice and delivery destination"
+    ]
+  },
+  {
+    "id": "confirmation",
+    "path": "/contact/confirmation",
+    "template": "T18",
+    "title": "Enquiry received",
+    "readiness": "requires_connection",
+    "indexing": "noindex",
+    "h1": "Your enquiry has been received.",
+    "primary_cta": "Return to your brief",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [
+      "enquiry_handler",
+      "privacy_notice"
+    ],
+    "meta": {
+      "title": "Enquiry received | VolumeRail",
+      "description": "Your enquiry has been accepted. Keep the reference below if you need to follow up.",
+      "canonicalPath": "/contact/confirmation",
+      "ogAssetId": "og-confirmation"
+    },
+    "ownerGates": [
+      "Show only after server-accepted receipt; no public personal data"
+    ]
+  },
+  {
+    "id": "support",
+    "path": "/support",
+    "template": "T19",
+    "title": "Support",
+    "readiness": "requires_connection",
+    "indexing": "index",
+    "h1": "Find the right next step.",
+    "primary_cta": "Contact support",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [
+      "enquiry_handler",
+      "privacy_notice"
+    ],
+    "meta": {
+      "title": "Support | VolumeRail",
+      "description": "Choose the right route for a commercial, technical or existing relationship question.",
+      "canonicalPath": "/support",
+      "ogAssetId": "og-support"
+    },
+    "ownerGates": [
+      "Verified support destination or shared enquiry handler"
+    ]
+  },
+  {
+    "id": "privacy",
+    "path": "/legal/privacy",
+    "template": "T20",
+    "title": "Privacy",
+    "readiness": "legal_review",
+    "indexing": "index",
+    "h1": "Privacy notice.",
+    "primary_cta": "Contact the data controller",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Privacy | VolumeRail",
+      "description": "Read how the responsible entity handles information submitted through this website.",
+      "canonicalPath": "/legal/privacy",
+      "ogAssetId": "og-privacy"
+    },
+    "ownerGates": [
+      "Approved legal notice with actual controller and processing details"
+    ]
+  },
+  {
+    "id": "cookies",
+    "path": "/legal/cookies",
+    "template": "T20",
+    "title": "Cookies",
+    "readiness": "legal_review",
+    "indexing": "index",
+    "h1": "Cookie information.",
+    "primary_cta": "Manage preferences",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Cookies | VolumeRail",
+      "description": "Understand the storage used for essential website functions and any optional analytics.",
+      "canonicalPath": "/legal/cookies",
+      "ogAssetId": "og-cookies"
+    },
+    "ownerGates": [
+      "Actual cookie and storage inventory with approved notice"
+    ]
+  },
+  {
+    "id": "terms",
+    "path": "/legal/terms",
+    "template": "T20",
+    "title": "Website terms",
+    "readiness": "legal_review",
+    "indexing": "index",
+    "h1": "Website terms.",
+    "primary_cta": "Contact VolumeRail",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Website terms | VolumeRail",
+      "description": "Read the terms applicable to using this website and contacting the responsible entity.",
+      "canonicalPath": "/legal/terms",
+      "ogAssetId": "og-terms"
+    },
+    "ownerGates": [
+      "Approved terms for actual entity and jurisdiction"
+    ]
+  },
+  {
+    "id": "not_found",
+    "path": "/404",
+    "template": "T21",
+    "title": "Page not found",
+    "readiness": "core",
+    "indexing": "noindex",
+    "h1": "Find your flow.",
+    "primary_cta": "Explore markets",
+    "locale": "en",
+    "navigation": true,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "editorial_review",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Page not found | VolumeRail",
+      "description": "This page could not be found. Your next step can still be clear.",
+      "canonicalPath": "/404",
+      "ogAssetId": "og-not_found"
+    },
+    "ownerGates": []
+  },
+  {
+    "id": "api",
+    "path": "/developers/api-reference",
+    "template": "T11",
+    "title": "API reference",
+    "readiness": "reserved",
+    "indexing": "noindex",
+    "h1": "API reference.",
+    "primary_cta": "Request current integration materials",
+    "locale": "en",
+    "navigation": false,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "draft",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [
+      "api_reference"
+    ],
+    "meta": {
+      "title": "API reference | VolumeRail",
+      "description": "Versioned API reference will be linked when an approved integration contract is available.",
+      "canonicalPath": "/developers/api-reference",
+      "ogAssetId": "og-api"
+    },
+    "ownerGates": [
+      "Approved API reference connection"
+    ]
+  },
+  {
+    "id": "status",
+    "path": "/status",
+    "template": "T24",
+    "title": "Service status",
+    "readiness": "reserved",
+    "indexing": "noindex",
+    "h1": "Service status.",
+    "primary_cta": "Open verified status service",
+    "locale": "en",
+    "navigation": false,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "draft",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [
+      "status_destination"
+    ],
+    "meta": {
+      "title": "Service status | VolumeRail",
+      "description": "Service status will be linked through a verified operational destination.",
+      "canonicalPath": "/status",
+      "ogAssetId": "og-status"
+    },
+    "ownerGates": [
+      "Verified status destination and incident owner"
+    ]
+  },
+  {
+    "id": "stories",
+    "path": "/customer-stories",
+    "template": "T15",
+    "title": "Customer stories",
+    "readiness": "reserved",
+    "indexing": "noindex",
+    "h1": "Evidence from real operating journeys.",
+    "primary_cta": "Read a verified story",
+    "locale": "en",
+    "navigation": false,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "draft",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Customer stories | VolumeRail",
+      "description": "Customer stories will appear when the customer, outcome and publishing permission are verified.",
+      "canonicalPath": "/customer-stories",
+      "ogAssetId": "og-stories"
+    },
+    "ownerGates": [
+      "At least one approved, evidenced customer story"
+    ]
+  },
+  {
+    "id": "story",
+    "path": "/customer-stories/[slug]",
+    "template": "T23",
+    "title": "Customer story",
+    "readiness": "reserved",
+    "indexing": "noindex",
+    "h1": "A verified operating story.",
+    "primary_cta": "Discuss a similar scope",
+    "locale": "en",
+    "navigation": false,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "draft",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Customer story | VolumeRail",
+      "description": "A story template for an approved customer outcome.",
+      "canonicalPath": "/customer-stories/[slug]",
+      "ogAssetId": "og-story"
+    },
+    "ownerGates": [
+      "ApprovedCase with evidence and permission"
+    ]
+  },
+  {
+    "id": "pricing",
+    "path": "/pricing",
+    "template": "T22",
+    "title": "Commercial setup",
+    "readiness": "reserved",
+    "indexing": "noindex",
+    "h1": "Commercial terms built around the scope.",
+    "primary_cta": "Request a scoped proposal",
+    "locale": "en",
+    "navigation": false,
+    "publication": "blocked_until_content_and_claims_review",
+    "publicationState": "draft",
+    "requiredEvidenceIds": [],
+    "requiredConnections": [],
+    "meta": {
+      "title": "Commercial setup | VolumeRail",
+      "description": "Commercial scope depends on the market, method, volume and operating arrangement.",
+      "canonicalPath": "/pricing",
+      "ogAssetId": "og-pricing"
+    },
+    "ownerGates": [
+      "Approved pricebook or commercial policy; do not publish invented fees"
+    ]
+  }
+]

@@ -1,0 +1,162 @@
+{
+  "items": [
+    {
+      "label": "Payments",
+      "href": "/payments",
+      "visible": true,
+      "children": [
+        {
+          "label": "Pay-ins",
+          "href": "/payments/pay-ins",
+          "visible": true
+        },
+        {
+          "label": "Payouts",
+          "href": "/payments/payouts",
+          "visible": true
+        },
+        {
+          "label": "Settlement",
+          "href": "/payments/settlement",
+          "visible": true
+        },
+        {
+          "label": "Local methods",
+          "href": "/payments/methods",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "label": "Markets",
+      "href": "/markets",
+      "visible": true,
+      "children": [
+        {
+          "label": "Asia",
+          "href": "/markets/asia",
+          "visible": true
+        },
+        {
+          "label": "Latin America",
+          "href": "/markets/latam",
+          "visible": true
+        },
+        {
+          "label": "Africa",
+          "href": "/markets/africa",
+          "visible": true
+        },
+        {
+          "label": "All focus markets",
+          "href": "/markets",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "label": "Industries",
+      "href": "/industries",
+      "visible": true,
+      "children": [
+        {
+          "label": "iGaming",
+          "href": "/industries/igaming",
+          "visible": true
+        },
+        {
+          "label": "Digital businesses",
+          "href": "/industries/digital-businesses",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "label": "Developers",
+      "href": "/developers",
+      "visible": true
+    },
+    {
+      "label": "Company",
+      "href": "/company",
+      "visible": true,
+      "children": [
+        {
+          "label": "Company",
+          "href": "/company",
+          "visible": true
+        },
+        {
+          "label": "Operating approach",
+          "href": "/trust",
+          "visible": true
+        },
+        {
+          "label": "Partners",
+          "href": "/partners",
+          "visible": true
+        },
+        {
+          "label": "Resources",
+          "href": "/resources",
+          "visible": true
+        },
+        {
+          "label": "Support",
+          "href": "/support",
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "primaryCta": {
+    "label": "Discuss your flow",
+    "href": "/contact",
+    "purpose": "merchant"
+  },
+  "footerGroups": [
+    {
+      "label": "Payments",
+      "items": [
+        "/payments/pay-ins",
+        "/payments/payouts",
+        "/payments/settlement",
+        "/payments/methods"
+      ]
+    },
+    {
+      "label": "Markets",
+      "items": [
+        "/markets/asia",
+        "/markets/latam",
+        "/markets/africa"
+      ]
+    },
+    {
+      "label": "Explore",
+      "items": [
+        "/developers",
+        "/partners",
+        "/company",
+        "/trust",
+        "/resources",
+        "/support"
+      ]
+    },
+    {
+      "label": "Legal",
+      "items": [
+        "/legal/privacy",
+        "/legal/cookies",
+        "/legal/terms"
+      ]
+    }
+  ],
+  "reservedHidden": [
+    "/developers/api-reference",
+    "/status",
+    "/customer-stories",
+    "/customer-stories/[slug]",
+    "/pricing"
+  ]
+}

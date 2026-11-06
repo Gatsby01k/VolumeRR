@@ -1,0 +1,282 @@
+{
+  "base": "http://127.0.0.1:3001",
+  "checkedAt": "2026-11-06T11:01:53.294Z",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/payments",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/payments/pay-ins",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/payments/payouts",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/payments/settlement",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/payments/methods",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/asia",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/latam",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/africa",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/india",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/peru",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/ghana",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/kenya",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/markets/compare",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/industries",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/industries/igaming",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/industries/digital-businesses",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/developers",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/developers/integration-guide",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/developers/payment-lifecycle",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/developers/webhooks",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/developers/reconciliation",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/partners",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/company",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/trust",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/resources",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/resources/local-payment-methods",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/resources/pay-ins-vs-payouts",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/resources/settlement-readiness",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/contact/confirmation",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/support",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/legal/privacy",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/legal/cookies",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/legal/terms",
+      "status": 200,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/404",
+      "status": 404,
+      "h1": 1,
+      "ok": true
+    },
+    {
+      "path": "/developers/api-reference",
+      "status": 404,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/status",
+      "status": 404,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/customer-stories",
+      "status": 404,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/pricing",
+      "status": 404,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/contact/basic",
+      "status": 200,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/this-route-does-not-exist",
+      "status": 404,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/api/receipt",
+      "status": 404,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "h1": 0,
+      "ok": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "h1": 0,
+      "ok": true
+    }
+  ]
+}

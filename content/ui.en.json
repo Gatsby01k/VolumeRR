@@ -1,0 +1,99 @@
+{
+  "availability": {
+    "unverified": "Scope to confirm",
+    "available": "Available within confirmed scope",
+    "conditional": "Available with conditions",
+    "unavailable": "Not available for this scope",
+    "stale": "Details being reviewed"
+  },
+  "actions": {
+    "addMarket": "Add country to brief",
+    "addFlow": "Add to brief",
+    "remove": "Remove",
+    "review": "Review brief",
+    "send": "Send enquiry",
+    "sending": "Sending enquiry…",
+    "retry": "Retry safely",
+    "back": "Back",
+    "next": "Continue",
+    "edit": "Edit",
+    "clear": "Clear filters",
+    "compare": "Compare markets",
+    "hideManta": "Hide Manta"
+  },
+  "filters": {
+    "search": "Search country or currency",
+    "regions": "All regions",
+    "flows": "All products",
+    "noResults": "No markets match these filters.",
+    "noResultsBody": "Clear a filter or tell us about another market.",
+    "compareLimit": "You can compare up to three markets. Remove one to add another."
+  },
+  "brief": {
+    "title": "Your payment brief",
+    "empty": "Start with a market or a payment need.",
+    "marketExploring": "Not sure yet",
+    "otherMarket": "Other market",
+    "flowExploring": "Still exploring",
+    "added": "Added to your brief.",
+    "removed": "Removed from your brief.",
+    "invalidSaved": "Some saved choices are no longer available. Please review your brief."
+  },
+  "form": {
+    "steps": [
+      "Markets",
+      "Products",
+      "Business",
+      "Review"
+    ],
+    "company": "Company or project",
+    "email": "Contact email",
+    "name": "Your name (optional)",
+    "website": "Website (optional)",
+    "volume": "Expected monthly volume (optional)",
+    "currency": "Volume currency",
+    "requirements": "Anything else we should know? (optional)",
+    "safeInput": "Please do not include bank details, passwords or identity documents.",
+    "privacy": "I have read the Privacy Notice.",
+    "marketing": "Yes, I’d like to receive product updates (optional).",
+    "errorTitle": "Please check the highlighted details.",
+    "uncertainTitle": "We could not confirm the result yet.",
+    "uncertainBody": "Your enquiry may have been received. Retry safely to check without sending a duplicate.",
+    "unavailable": "We could not accept the enquiry. Your details are still here. Please try again.",
+    "rateLimited": "Please wait a moment before trying again.",
+    "acceptedTitle": "Enquiry received.",
+    "missingReceipt": "There is no confirmed enquiry to show. Return to your brief to continue.",
+    "receiptLabel": "Enquiry reference",
+    "purpose": "What would you like to discuss?",
+    "companyError": "Enter your company or project.",
+    "emailError": "Enter a valid contact email.",
+    "marketError": "Select a market, add another or choose Not sure yet.",
+    "flowError": "Select a product or choose Still exploring.",
+    "privacyError": "Please read and acknowledge the Privacy Notice.",
+    "websiteError": "Enter a complete website address beginning with https:// or http://.",
+    "volumeError": "Enter a non-negative amount and select its currency.",
+    "partnerTypeError": "Choose the type of partnership.",
+    "unknownChoiceError": "This choice needs to be reviewed. Please select it again."
+  },
+  "companion": {
+    "hide": "Hide Manta",
+    "show": "Show Manta",
+    "motionReduced": "Reduced motion",
+    "role": "A living part of the flow.",
+    "speechBubbles": false
+  },
+  "general": {
+    "illustration": "Illustrative flow",
+    "conceptual": "Conceptual example",
+    "methodContext": "Local market context",
+    "availabilityNote": "Market availability and terms are confirmed for your business.",
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "close": "Close",
+    "motion": "Motion preferences",
+    "loading": "Loading…",
+    "recoverable": "This section could not load. Please try again.",
+    "copySuccess": "Copied.",
+    "copyError": "Could not copy. Select the text to copy it manually."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "componentIds": [
+    "C01",
+    "C02",
+    "C03",
+    "C26",
+    "C27",
+    "C28",
+    "C29",
+    "C37",
+    "C38"
+  ],
+  "optionalComponentIds": [
+    "C32",
+    "C39"
+  ],
+  "companionName": "Manta",
+  "companionDefaultHiddenOn": [
+    "T11",
+    "T19",
+    "T20",
+    "T24"
+  ],
+  "singleVisibleInstance": true
+}
